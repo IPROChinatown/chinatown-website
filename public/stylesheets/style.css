@@ -4,6 +4,9 @@ body,
   line-height: 1.5;
   letter-spacing: 0.85px;
 }
+body{
+  background-color: rgba(243,184,71,.8);
+}
 a,
 a:hover,
 a:focus {
