@@ -3,8 +3,18 @@
 <% include partials/head %>
 
 <body class="text-black base-font-size">
-  <% include partials/body/nav %>
-  <% include partials/body/hero %>
+  <% include partials/nav %>
+  <!-- Hero -->
+    <div class="container h-100">
+      <div class="row align-items-center h-100">
+        <div class="col-12 col-lg-9 mx-auto ml-lg-auto mr-lg-0 text-center">
+            <% include partials/content/about %>
+            <!-- Empty Space -->
+            <div class="lg-space"></div>
+        </div>
+      </div>
+    </div>
+  <!--/ End Hero -->
   <% include partials/scripts %>
 </body>
 
