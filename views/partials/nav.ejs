@@ -10,9 +10,49 @@
           <ul class="navbar-nav ml-auto mt-lg-3">
             <li class="nav-item">
               <a class="nav-link text-black font-family-secondary js-scroll-trigger mr-lg-4" href="/about">About</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">Project Vision</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">CBAC</a>
+                </li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-black font-family-secondary js-scroll-trigger mx-lg-4" href="/location">Locations</a>
+            <li class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle text-black font-family-secondary js-scroll-trigger mx-lg-4" href="/location" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Locations
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">Nine Dragon Wall</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">Pui Tak</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">Familly Association</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">St Therese</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">CCUC / You are Beautiful</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">Store</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">Budist Temple</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">CASL Association & CCBAC</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="text-black font-family-secondary" href="#">Ping Tom (water taxi, mural)</a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link text-black font-family-secondary js-scroll-trigger mx-lg-4" href="/map">Map</a>
@@ -25,7 +65,9 @@
       </div>
     </nav>
     <div class="col-2 col-sm-3 mx-3 px-3">
-      <img src="/images/museum-logo/logo.png">
+      <a href="/">
+        <img src="/images/museum-logo/logo.png">
+      </a>
     </div>
   </div>
 </header>
