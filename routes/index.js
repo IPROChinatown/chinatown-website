@@ -22,17 +22,17 @@ router.get('/map', function(req, res, next) {
 });
 
 /* GET nine-dragon page. */
-router.get('/locations/nine-dragon', function(req, res, next) {
-  res.render('nine-dragon', { title: 'Nine Dragon Wall' });
-});
+// router.get('/locations/', function(req, res, next) {
+//   res.render('nine-dragon', { title: 'Nine Dragon Wall' });
+// });
 
 /* GET st-therese page. */
-router.get('/locations/st-therese', function(req, res, next) {
-  res.render('st-therese', { title: 'St. Therese' });
-});
+// router.get('/locations/', function(req, res, next) {
+//   res.render('st-therese', { title: 'St. Therese' });
+// });
 
 /* GET individual location pages. */
-var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl"]
+var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon"]
 
 function make_loc_router (loc) {
 	router.get("/locations/".concat(loc), function(req, res, next) {
