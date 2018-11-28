@@ -55,7 +55,7 @@ var locations = [
 	 "address": "2216 S Wentworth Ave",
 	 "position": {"lat": 41.852396900, "lng": -87.632291100},
 	 "icon": make_icon_link("puitak.png"),
-	 "link": ""},
+	 "link": "locations/puitak"},
 	{"name": "Chinatown Square Plaza",
 	 "address": "2133 S China Pl",
 	 "position": {"lat": 41.853490, "lng": -87.635407},
