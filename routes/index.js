@@ -31,4 +31,17 @@ router.get('/locations/st-therese', function(req, res, next) {
   res.render('st-therese', { title: 'St. Therese' });
 });
 
+/* GET individual location pages. */
+var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl"]
+
+function make_loc_router (loc) {
+	router.get("/locations/".concat(loc), function(req, res, next) {
+		res.render("locations/".concat(loc), { title: loc });
+	});
+}
+
+for (l = 0; l < locs.length; l++) {
+	make_loc_router(locs[l]);
+}
+
 module.exports = router;
