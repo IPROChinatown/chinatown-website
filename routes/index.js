@@ -21,4 +21,17 @@ router.get('/map', function(req, res, next) {
   res.render('map', { title: 'Maps' });
 });
 
+/* GET individual location pages. */
+var locs = ["buddhistassoc", "medicine", "ccamuseum", "casl"]
+
+function make_loc_router (loc) {
+	router.get("/locations/".concat(loc), function(req, res, next) {
+		res.render("locations/".concat(loc), { title: loc });
+	});
+}
+
+for (l = 0; l < locs.length; l++) {
+	make_loc_router(locs[l]);
+}
+
 module.exports = router;
