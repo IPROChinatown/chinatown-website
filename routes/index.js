@@ -21,17 +21,14 @@ router.get('/map', function(req, res, next) {
   res.render('map', { title: 'Maps' });
 });
 
-/* GET individual location pages. */
-var locs = ["buddhistassoc", "medicine", "ccamuseum", "casl"]
+/* GET nine-dragon page. */
+router.get('/locations/nine-dragon', function(req, res, next) {
+  res.render('nine-dragon', { title: 'Nine Dragon Wall' });
+});
 
-function make_loc_router (loc) {
-	router.get("/locations/".concat(loc), function(req, res, next) {
-		res.render("locations/".concat(loc), { title: loc });
-	});
-}
-
-for (l = 0; l < locs.length; l++) {
-	make_loc_router(locs[l]);
-}
+/* GET st-therese page. */
+router.get('/locations/st-therese', function(req, res, next) {
+  res.render('st-therese', { title: 'St. Therese' });
+});
 
 module.exports = router;
