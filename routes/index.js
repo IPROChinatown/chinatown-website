@@ -21,4 +21,14 @@ router.get('/map', function(req, res, next) {
   res.render('map', { title: 'Maps' });
 });
 
+/* GET nine-dragon page. */
+router.get('/locations/nine-dragon', function(req, res, next) {
+  res.render('nine-dragon', { title: 'Nine Dragon Wall' });
+});
+
+/* GET st-therese page. */
+router.get('/locations/st-therese', function(req, res, next) {
+  res.render('st-therese', { title: 'St. Therese' });
+});
+
 module.exports = router;
