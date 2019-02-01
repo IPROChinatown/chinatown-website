@@ -83,16 +83,19 @@ var origin_long_end = -87.6300;
 var map_width_coords = origin_long_end - origin_long;
 var map_height_coords = origin_lat_end - origin_lat;
 
-var map_width = 600;
-var map_height = 600;
-
 var main_map = document.createElement("img");
-main_map.src = "/images/ct-map-coords-big.png";
-main_map.setAttribute("id", "main_map");
 main_map.setAttribute("alt", "map");
-main_map.setAttribute("width", map_width.toString());
-main_map.setAttribute("height", map_height.toString());
+main_map.setAttribute("id", "main_map");
+main_map.setAttribute("src", "/images/ct-map-coords-big.png");
+main_map.setAttribute("width", "600px");
+main_map.style.position = "relative";
+main_map.style.left = "10%";
+main_map.style.width = "80%";
+main_map.style.height = "600px";
 document.getElementById("map").appendChild(main_map);
+
+var map_width = main_map.offsetWidth;
+var map_height = main_map.offsetHeight;
 
 function mapOpen(v) {
 	var elem=document.createElement("img");
@@ -153,10 +156,12 @@ function erase_locs() {
 }
 
 function refresh_locs() {
-	erase_locs();
-	load_locs();
+    map_width = main_map.offsetWidth;
+    map_height = main_map.offsetHeight;
+    erase_locs();
+    load_locs();
 }
 
-load_locs();
+setTimeout(function(){ load_locs(); }, 300);
 
 window.onresize = refresh_locs;
