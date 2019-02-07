@@ -1,0 +1,2 @@
+C:\Users\shirl\chinatown-website\obj\x86\Debug\chinatown-web.vbprojAssemblyReference.cache
+C:\Users\shirl\chinatown-website\obj\x86\Debug\chinatown-web.vbproj.CoreCompileInputs.cache
