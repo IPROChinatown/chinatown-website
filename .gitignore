@@ -1,1 +1,5 @@
 .DS_Store
+.vs/
+obj/x86/
+chinatown-web.sln
+chinatown-web.vbproj*
