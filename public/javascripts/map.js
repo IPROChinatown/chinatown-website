@@ -11,7 +11,6 @@ function make_icon_link (name) {
 }
 
 var locations = [
-	
 	{"name": "Nine Dragon Wall",
 	 "address": "158 W Cermak Rd",
 	 "position": {"lat": 41.853170000, "lng": -87.631345000},
@@ -119,14 +118,15 @@ document.getElementById("map").appendChild(main_map);
 var map_width = main_map.offsetWidth;
 var map_height = main_map.offsetHeight;
 
-function mapOpen(v) {
+function mapOpen(idx) {
+    var v = locations[idx];
 	var elem=document.createElement("img");
 
 	var coords = translate_coords(v.position.lat, v.position.lng);
 
 	elem.src = v.icon;
-	elem.setAttribute("alt", v.name);
-	elem.setAttribute("usemap", "#clickable ".concat(v.name));
+	elem.setAttribute("alt", "");
+    elem.setAttribute("usemap", "#clickable ".concat(v.name));
 
 	elem.style.position = "absolute";
 
@@ -141,11 +141,14 @@ function mapOpen(v) {
 	elem.style.left = x.toString().concat("px");
 	document.getElementById("map").appendChild(elem);
 
-	var clickable = document.createElement("map");
+    var clickable = document.createElement("map");
+
 	clickable.setAttribute("name", "clickable ".concat(v.name));
 	document.getElementById("map").appendChild(clickable);
 	
-	var click_area = document.createElement("area");
+    var click_area = document.createElement("area");
+    click_area.setAttribute("onmouseenter", "iconToFront(".concat(idx.toString().concat(")")));
+
 	click_area.setAttribute("shape", "rect");
 	click_area.setAttribute("coords", "0,0,".concat(icon_width.toString()).concat(",").concat(icon_height.toString()));
 	click_area.setAttribute("href", v.link);
@@ -165,16 +168,17 @@ function translate_coords(latitude, longitude) {
 
 function load_locs() {
 	for (var loc = 0; loc < locations.length; loc++) {
-		mapOpen(locations[loc]);
+		mapOpen(loc);
 	}
 }
 
 function erase_locs() {
-	for (var i = 0; i < location_elems.length; i++) {
-		if (location_elems[i].parentNode != null) {
-			location_elems[i].parentNode.removeChild(location_elems[i]);
-		}
+    for (var i = 0; i < location_elems.length; i++) {
+	if (location_elems[i].parentNode != null) {
+	    location_elems[i].parentNode.removeChild(location_elems[i]);
 	}
+    }
+    location_elems = [];
 }
 
 function refresh_locs() {
@@ -182,6 +186,13 @@ function refresh_locs() {
     map_height = main_map.offsetHeight;
     erase_locs();
     load_locs();
+}
+
+function iconToFront(idx) {
+    mapOpen(idx);
+    if (location_elems.length > 10000) {
+	refresh_locs();
+    }
 }
 
 setTimeout(function(){ load_locs(); }, 300);
