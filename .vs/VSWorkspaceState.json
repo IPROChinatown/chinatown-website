@@ -3,9 +3,11 @@
     "",
     "\\public",
     "\\public\\javascripts",
+    "\\routes",
     "\\views",
-    "\\views\\locations"
+    "\\views\\locations",
+    "\\views\\partials"
   ],
-  "SelectedNode": "\\views",
+  "SelectedNode": "\\views\\locations\\commerce.ejs",
   "PreviewInSolutionExplorer": false
 }
