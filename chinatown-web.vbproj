@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{00958C62-E91B-429D-8940-91A99C4FBF62}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>chinatown_web</RootNamespace>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="app.js" />
+    <Content Include="node_modules\accepts\index.js" />
+    <Content Include="node_modules\array-flatten\array-flatten.js" />
+    <Content Include="node_modules\basic-auth\index.js" />
+    <Content Include="node_modules\basic-auth\node_modules\safe-buffer\index.js" />
+    <Content Include="node_modules\body-parser\index.js" />
+    <Content Include="node_modules\body-parser\lib\read.js" />
+    <Content Include="node_modules\body-parser\lib\types\json.js" />
+    <Content Include="node_modules\body-parser\lib\types\raw.js" />
+    <Content Include="node_modules\body-parser\lib\types\text.js" />
+    <Content Include="node_modules\body-parser\lib\types\urlencoded.js" />
+    <Content Include="node_modules\bytes\index.js" />
+    <Content Include="node_modules\content-disposition\index.js" />
+    <Content Include="node_modules\content-type\index.js" />
+    <Content Include="node_modules\cookie-parser\index.js" />
+    <Content Include="node_modules\cookie-signature\index.js" />
+    <Content Include="node_modules\cookie\index.js" />
+    <Content Include="node_modules\debug\karma.conf.js" />
+    <Content Include="node_modules\debug\node.js" />
+    <Content Include="node_modules\debug\src\browser.js" />
+    <Content Include="node_modules\debug\src\debug.js" />
+    <Content Include="node_modules\debug\src\index.js" />
+    <Content Include="node_modules\debug\src\inspector-log.js" />
+    <Content Include="node_modules\debug\src\node.js" />
+    <Content Include="node_modules\depd\index.js" />
+    <Content Include="node_modules\depd\lib\browser\index.js" />
+    <Content Include="node_modules\depd\lib\compat\callsite-tostring.js" />
+    <Content Include="node_modules\depd\lib\compat\event-listener-count.js" />
+    <Content Include="node_modules\depd\lib\compat\index.js" />
+    <Content Include="node_modules\destroy\index.js" />
+    <Content Include="node_modules\ee-first\index.js" />
+    <Content Include="node_modules\ejs\ejs.js" />
+    <Content Include="node_modules\ejs\ejs.min.js" />
+    <Content Include="node_modules\ejs\lib\ejs.js" />
+    <Content Include="node_modules\ejs\lib\utils.js" />
+    <Content Include="node_modules\encodeurl\index.js" />
+    <Content Include="node_modules\escape-html\index.js" />
+    <Content Include="node_modules\etag\index.js" />
+    <Content Include="node_modules\express\index.js" />
+    <Content Include="node_modules\express\lib\application.js" />
+    <Content Include="node_modules\express\lib\express.js" />
+    <Content Include="node_modules\express\lib\middleware\init.js" />
+    <Content Include="node_modules\express\lib\middleware\query.js" />
+    <Content Include="node_modules\express\lib\request.js" />
+    <Content Include="node_modules\express\lib\response.js" />
+    <Content Include="node_modules\express\lib\router\index.js" />
+    <Content Include="node_modules\express\lib\router\layer.js" />
+    <Content Include="node_modules\express\lib\router\route.js" />
+    <Content Include="node_modules\express\lib\utils.js" />
+    <Content Include="node_modules\express\lib\view.js" />
+    <Content Include="node_modules\finalhandler\index.js" />
+    <Content Include="node_modules\forwarded\index.js" />
+    <Content Include="node_modules\fresh\index.js" />
+    <Content Include="node_modules\http-errors\index.js" />
+    <Content Include="node_modules\iconv-lite\encodings\dbcs-codec.js" />
+    <Content Include="node_modules\iconv-lite\encodings\dbcs-data.js" />
+    <Content Include="node_modules\iconv-lite\encodings\index.js" />
+    <Content Include="node_modules\iconv-lite\encodings\internal.js" />
+    <Content Include="node_modules\iconv-lite\encodings\sbcs-codec.js" />
+    <Content Include="node_modules\iconv-lite\encodings\sbcs-data-generated.js" />
+    <Content Include="node_modules\iconv-lite\encodings\sbcs-data.js" />
+    <Content Include="node_modules\iconv-lite\encodings\utf16.js" />
+    <Content Include="node_modules\iconv-lite\encodings\utf7.js" />
+    <Content Include="node_modules\iconv-lite\lib\bom-handling.js" />
+    <Content Include="node_modules\iconv-lite\lib\extend-node.js" />
+    <Content Include="node_modules\iconv-lite\lib\index.js" />
+    <Content Include="node_modules\iconv-lite\lib\streams.js" />
+    <Content Include="node_modules\inherits\inherits.js" />
+    <Content Include="node_modules\inherits\inherits_browser.js" />
+    <Content Include="node_modules\ipaddr.js\ipaddr.min.js" />
+    <Content Include="node_modules\ipaddr.js\lib\ipaddr.js" />
+    <Content Include="node_modules\media-typer\index.js" />
+    <Content Include="node_modules\merge-descriptors\index.js" />
+    <Content Include="node_modules\methods\index.js" />
+    <Content Include="node_modules\mime-db\index.js" />
+    <Content Include="node_modules\mime-types\index.js" />
+    <Content Include="node_modules\mime\build\build.js" />
+    <Content Include="node_modules\mime\build\test.js" />
+    <Content Include="node_modules\mime\cli.js" />
+    <Content Include="node_modules\mime\mime.js" />
+    <Content Include="node_modules\morgan\index.js" />
+    <Content Include="node_modules\ms\index.js" />
+    <Content Include="node_modules\negotiator\index.js" />
+    <Content Include="node_modules\negotiator\lib\charset.js" />
+    <Content Include="node_modules\negotiator\lib\encoding.js" />
+    <Content Include="node_modules\negotiator\lib\language.js" />
+    <Content Include="node_modules\negotiator\lib\mediaType.js" />
+    <Content Include="node_modules\on-finished\index.js" />
+    <Content Include="node_modules\on-headers\index.js" />
+    <Content Include="node_modules\parseurl\index.js" />
+    <Content Include="node_modules\path-to-regexp\index.js" />
+    <Content Include="node_modules\proxy-addr\index.js" />
+    <Content Include="node_modules\qs\dist\qs.js" />
+    <Content Include="node_modules\qs\lib\formats.js" />
+    <Content Include="node_modules\qs\lib\index.js" />
+    <Content Include="node_modules\qs\lib\parse.js" />
+    <Content Include="node_modules\qs\lib\stringify.js" />
+    <Content Include="node_modules\qs\lib\utils.js" />
+    <Content Include="node_modules\qs\test\index.js" />
+    <Content Include="node_modules\qs\test\parse.js" />
+    <Content Include="node_modules\qs\test\stringify.js" />
+    <Content Include="node_modules\qs\test\utils.js" />
+    <Content Include="node_modules\range-parser\index.js" />
+    <Content Include="node_modules\raw-body\index.js" />
+    <Content Include="node_modules\raw-body\node_modules\depd\index.js" />
+    <Content Include="node_modules\raw-body\node_modules\depd\lib\browser\index.js" />
+    <Content Include="node_modules\raw-body\node_modules\depd\lib\compat\callsite-tostring.js" />
+    <Content Include="node_modules\raw-body\node_modules\depd\lib\compat\event-listener-count.js" />
+    <Content Include="node_modules\raw-body\node_modules\depd\lib\compat\index.js" />
+    <Content Include="node_modules\raw-body\node_modules\http-errors\index.js" />
+    <Content Include="node_modules\raw-body\node_modules\setprototypeof\index.js" />
+    <Content Include="node_modules\safe-buffer\index.js" />
+    <Content Include="node_modules\safe-buffer\test.js" />
+    <Content Include="node_modules\send\index.js" />
+    <Content Include="node_modules\serve-static\index.js" />
+    <Content Include="node_modules\setprototypeof\index.js" />
+    <Content Include="node_modules\statuses\index.js" />
+    <Content Include="node_modules\type-is\index.js" />
+    <Content Include="node_modules\unpipe\index.js" />
+    <Content Include="node_modules\utils-merge\index.js" />
+    <Content Include="node_modules\vary\index.js" />
+    <Content Include="public\images\ct-map-coords-big.png" />
+    <Content Include="public\images\favicons\android-icon-144x144.png" />
+    <Content Include="public\images\favicons\android-icon-192x192.png" />
+    <Content Include="public\images\favicons\android-icon-36x36.png" />
+    <Content Include="public\images\favicons\android-icon-48x48.png" />
+    <Content Include="public\images\favicons\android-icon-72x72.png" />
+    <Content Include="public\images\favicons\android-icon-96x96.png" />
+    <Content Include="public\images\favicons\apple-icon-114x114.png" />
+    <Content Include="public\images\favicons\apple-icon-120x120.png" />
+    <Content Include="public\images\favicons\apple-icon-144x144.png" />
+    <Content Include="public\images\favicons\apple-icon-152x152.png" />
+    <Content Include="public\images\favicons\apple-icon-180x180.png" />
+    <Content Include="public\images\favicons\apple-icon-57x57.png" />
+    <Content Include="public\images\favicons\apple-icon-60x60.png" />
+    <Content Include="public\images\favicons\apple-icon-72x72.png" />
+    <Content Include="public\images\favicons\apple-icon-76x76.png" />
+    <Content Include="public\images\favicons\apple-icon-precomposed.png" />
+    <Content Include="public\images\favicons\apple-icon.png" />
+    <Content Include="public\images\favicons\browserconfig.xml" />
+    <Content Include="public\images\favicons\favicon-16x16.png" />
+    <Content Include="public\images\favicons\favicon-32x32.png" />
+    <Content Include="public\images\favicons\favicon-96x96.png" />
+    <Content Include="public\images\favicons\favicon.ico" />
+    <Content Include="public\images\favicons\ms-icon-144x144.png" />
+    <Content Include="public\images\favicons\ms-icon-150x150.png" />
+    <Content Include="public\images\favicons\ms-icon-310x310.png" />
+    <Content Include="public\images\favicons\ms-icon-70x70.png" />
+    <Content Include="public\images\footer-image-1.png" />
+    <Content Include="public\images\footer-image-2.png" />
+    <Content Include="public\images\hero-image-1.png" />
+    <Content Include="public\images\locations\buddhist-temple.jpg" />
+    <Content Include="public\images\locations\nine-dragon.png" />
+    <Content Include="public\images\locations\st-therese.png" />
+    <Content Include="public\images\main.jpg" />
+    <Content Include="public\images\map-icons\45\casl.png" />
+    <Content Include="public\images\map-icons\45\ccuc.png" />
+    <Content Include="public\images\map-icons\45\dragonwall.png" />
+    <Content Include="public\images\map-icons\45\family.png" />
+    <Content Include="public\images\map-icons\45\medicine.png" />
+    <Content Include="public\images\map-icons\45\museum.png" />
+    <Content Include="public\images\map-icons\45\pin.png" />
+    <Content Include="public\images\map-icons\45\pingtom.png" />
+    <Content Include="public\images\map-icons\45\plaza.png" />
+    <Content Include="public\images\map-icons\45\puitak.png" />
+    <Content Include="public\images\map-icons\45\temple.png" />
+    <Content Include="public\images\map-icons\45\therese.png" />
+    <Content Include="public\images\map-icons\45\uniquetraditions.png" />
+    <Content Include="public\images\map-icons\80\casl.png" />
+    <Content Include="public\images\map-icons\80\ccuc.png" />
+    <Content Include="public\images\map-icons\80\dragonwall.png" />
+    <Content Include="public\images\map-icons\80\family.png" />
+    <Content Include="public\images\map-icons\80\medicine.png" />
+    <Content Include="public\images\map-icons\80\museum.png" />
+    <Content Include="public\images\map-icons\80\pin.png" />
+    <Content Include="public\images\map-icons\80\pingtom.png" />
+    <Content Include="public\images\map-icons\80\plaza.png" />
+    <Content Include="public\images\map-icons\80\puitak.png" />
+    <Content Include="public\images\map-icons\80\temple.png" />
+    <Content Include="public\images\map-icons\80\therese.png" />
+    <Content Include="public\images\map-icons\80\uniquetraditions.png" />
+    <Content Include="public\images\museum-logo\logo.png" />
+    <Content Include="public\images\pattern-1.png" />
+    <Content Include="public\images\pingtom.jpg" />
+    <Content Include="public\javascripts\bootstrap.min.js" />
+    <Content Include="public\javascripts\isotope.min.js" />
+    <Content Include="public\javascripts\jquery.min.js" />
+    <Content Include="public\javascripts\language.js" />
+    <Content Include="public\javascripts\main.js" />
+    <Content Include="public\javascripts\map.js" />
+    <Content Include="public\javascripts\popper.min.js" />
+    <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\button.css" />
+    <Content Include="public\stylesheets\color.css" />
+    <Content Include="public\stylesheets\default.css" />
+    <Content Include="public\stylesheets\font.css" />
+    <Content Include="public\stylesheets\style.css" />
+    <Content Include="routes\index.js" />
+    <Content Include="routes\users.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\chinatown-web-jue" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\chinatown-web-jue" />
+    <None Include=".git\logs\refs\remotes\origin\chinatown-web-keith" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\0d\d8f822c89a67a2a2e87159c3dc1722a7944526" />
+    <None Include=".git\objects\11\ebb090a1131f13dd7d576e0beb1575a2dbfd14" />
+    <None Include=".git\objects\49\afab461984d7f6f16fec13b138e5886bcbcf59" />
+    <None Include=".git\objects\73\dd6b8f3dab872255e8196be8d02bc27c37d7b3" />
+    <None Include=".git\objects\88\7bbf467846dae583df09c6fa2e3b96d67b44e8" />
+    <None Include=".git\objects\8d\d605dac36767ed00c3ff4070d30b10317cde3d" />
+    <None Include=".git\objects\9f\01665365811cef2c9095929d0743f45f2c87ea" />
+    <None Include=".git\objects\cb\14c4cba855168483908d11faea9d9c05bfdd36" />
+    <None Include=".git\objects\pack\pack-4ef86f8377fec5574a8824f5a8a1cac4f6f16fac.idx" />
+    <None Include=".git\objects\pack\pack-4ef86f8377fec5574a8824f5a8a1cac4f6f16fac.pack" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\chinatown-web-jue" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\chinatown-web-jue" />
+    <None Include=".git\refs\remotes\origin\chinatown-web-keith" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include="node_modules\.bin\mime" />
+    <None Include="node_modules\accepts\HISTORY.md" />
+    <None Include="node_modules\accepts\LICENSE" />
+    <None Include="node_modules\accepts\package.json" />
+    <None Include="node_modules\accepts\README.md" />
+    <None Include="node_modules\array-flatten\LICENSE" />
+    <None Include="node_modules\array-flatten\package.json" />
+    <None Include="node_modules\array-flatten\README.md" />
+    <None Include="node_modules\basic-auth\HISTORY.md" />
+    <None Include="node_modules\basic-auth\LICENSE" />
+    <None Include="node_modules\basic-auth\node_modules\safe-buffer\LICENSE" />
+    <None Include="node_modules\basic-auth\node_modules\safe-buffer\package.json" />
+    <None Include="node_modules\basic-auth\node_modules\safe-buffer\README.md" />
+    <None Include="node_modules\basic-auth\package.json" />
+    <None Include="node_modules\basic-auth\README.md" />
+    <None Include="node_modules\body-parser\HISTORY.md" />
+    <None Include="node_modules\body-parser\LICENSE" />
+    <None Include="node_modules\body-parser\package.json" />
+    <None Include="node_modules\body-parser\README.md" />
+    <None Include="node_modules\bytes\History.md" />
+    <None Include="node_modules\bytes\LICENSE" />
+    <None Include="node_modules\bytes\package.json" />
+    <None Include="node_modules\bytes\Readme.md" />
+    <None Include="node_modules\content-disposition\HISTORY.md" />
+    <None Include="node_modules\content-disposition\LICENSE" />
+    <None Include="node_modules\content-disposition\package.json" />
+    <None Include="node_modules\content-disposition\README.md" />
+    <None Include="node_modules\content-type\HISTORY.md" />
+    <None Include="node_modules\content-type\LICENSE" />
+    <None Include="node_modules\content-type\package.json" />
+    <None Include="node_modules\content-type\README.md" />
+    <None Include="node_modules\cookie-parser\HISTORY.md" />
+    <None Include="node_modules\cookie-parser\LICENSE" />
+    <None Include="node_modules\cookie-parser\package.json" />
+    <None Include="node_modules\cookie-parser\README.md" />
+    <None Include="node_modules\cookie-signature\.npmignore" />
+    <None Include="node_modules\cookie-signature\History.md" />
+    <None Include="node_modules\cookie-signature\package.json" />
+    <None Include="node_modules\cookie-signature\Readme.md" />
+    <None Include="node_modules\cookie\HISTORY.md" />
+    <None Include="node_modules\cookie\LICENSE" />
+    <None Include="node_modules\cookie\package.json" />
+    <None Include="node_modules\cookie\README.md" />
+    <None Include="node_modules\debug\.coveralls.yml" />
+    <None Include="node_modules\debug\.eslintrc" />
+    <None Include="node_modules\debug\.npmignore" />
+    <None Include="node_modules\debug\.travis.yml" />
+    <None Include="node_modules\debug\CHANGELOG.md" />
+    <None Include="node_modules\debug\component.json" />
+    <None Include="node_modules\debug\LICENSE" />
+    <None Include="node_modules\debug\Makefile" />
+    <None Include="node_modules\debug\package.json" />
+    <None Include="node_modules\debug\README.md" />
+    <None Include="node_modules\depd\History.md" />
+    <None Include="node_modules\depd\LICENSE" />
+    <None Include="node_modules\depd\package.json" />
+    <None Include="node_modules\depd\Readme.md" />
+    <None Include="node_modules\destroy\LICENSE" />
+    <None Include="node_modules\destroy\package.json" />
+    <None Include="node_modules\destroy\README.md" />
+    <None Include="node_modules\ee-first\LICENSE" />
+    <None Include="node_modules\ee-first\package.json" />
+    <None Include="node_modules\ee-first\README.md" />
+    <None Include="node_modules\ejs\Jakefile" />
+    <None Include="node_modules\ejs\LICENSE" />
+    <None Include="node_modules\ejs\package.json" />
+    <None Include="node_modules\ejs\README.md" />
+    <None Include="node_modules\encodeurl\HISTORY.md" />
+    <None Include="node_modules\encodeurl\LICENSE" />
+    <None Include="node_modules\encodeurl\package.json" />
+    <None Include="node_modules\encodeurl\README.md" />
+    <None Include="node_modules\escape-html\LICENSE" />
+    <None Include="node_modules\escape-html\package.json" />
+    <None Include="node_modules\escape-html\Readme.md" />
+    <None Include="node_modules\etag\HISTORY.md" />
+    <None Include="node_modules\etag\LICENSE" />
+    <None Include="node_modules\etag\package.json" />
+    <None Include="node_modules\etag\README.md" />
+    <None Include="node_modules\express\History.md" />
+    <None Include="node_modules\express\LICENSE" />
+    <None Include="node_modules\express\package.json" />
+    <None Include="node_modules\express\Readme.md" />
+    <None Include="node_modules\finalhandler\HISTORY.md" />
+    <None Include="node_modules\finalhandler\LICENSE" />
+    <None Include="node_modules\finalhandler\package.json" />
+    <None Include="node_modules\finalhandler\README.md" />
+    <None Include="node_modules\forwarded\HISTORY.md" />
+    <None Include="node_modules\forwarded\LICENSE" />
+    <None Include="node_modules\forwarded\package.json" />
+    <None Include="node_modules\forwarded\README.md" />
+    <None Include="node_modules\fresh\HISTORY.md" />
+    <None Include="node_modules\fresh\LICENSE" />
+    <None Include="node_modules\fresh\package.json" />
+    <None Include="node_modules\fresh\README.md" />
+    <None Include="node_modules\http-errors\HISTORY.md" />
+    <None Include="node_modules\http-errors\LICENSE" />
+    <None Include="node_modules\http-errors\package.json" />
+    <None Include="node_modules\http-errors\README.md" />
+    <None Include="node_modules\iconv-lite\.npmignore" />
+    <None Include="node_modules\iconv-lite\.travis.yml" />
+    <None Include="node_modules\iconv-lite\Changelog.md" />
+    <None Include="node_modules\iconv-lite\encodings\tables\big5-added.json" />
+    <None Include="node_modules\iconv-lite\encodings\tables\cp936.json" />
+    <None Include="node_modules\iconv-lite\encodings\tables\cp949.json" />
+    <None Include="node_modules\iconv-lite\encodings\tables\cp950.json" />
+    <None Include="node_modules\iconv-lite\encodings\tables\eucjp.json" />
+    <None Include="node_modules\iconv-lite\encodings\tables\gb18030-ranges.json" />
+    <None Include="node_modules\iconv-lite\encodings\tables\gbk-added.json" />
+    <None Include="node_modules\iconv-lite\encodings\tables\shiftjis.json" />
+    <None Include="node_modules\iconv-lite\LICENSE" />
+    <None Include="node_modules\iconv-lite\package.json" />
+    <None Include="node_modules\iconv-lite\README.md" />
+    <None Include="node_modules\inherits\LICENSE" />
+    <None Include="node_modules\inherits\package.json" />
+    <None Include="node_modules\inherits\README.md" />
+    <None Include="node_modules\ipaddr.js\package.json" />
+    <None Include="node_modules\ipaddr.js\README.md" />
+    <None Include="node_modules\media-typer\HISTORY.md" />
+    <None Include="node_modules\media-typer\LICENSE" />
+    <None Include="node_modules\media-typer\package.json" />
+    <None Include="node_modules\media-typer\README.md" />
+    <None Include="node_modules\merge-descriptors\HISTORY.md" />
+    <None Include="node_modules\merge-descriptors\LICENSE" />
+    <None Include="node_modules\merge-descriptors\package.json" />
+    <None Include="node_modules\merge-descriptors\README.md" />
+    <None Include="node_modules\methods\HISTORY.md" />
+    <None Include="node_modules\methods\LICENSE" />
+    <None Include="node_modules\methods\package.json" />
+    <None Include="node_modules\methods\README.md" />
+    <None Include="node_modules\mime-db\db.json" />
+    <None Include="node_modules\mime-db\HISTORY.md" />
+    <None Include="node_modules\mime-db\LICENSE" />
+    <None Include="node_modules\mime-db\package.json" />
+    <None Include="node_modules\mime-db\README.md" />
+    <None Include="node_modules\mime-types\HISTORY.md" />
+    <None Include="node_modules\mime-types\LICENSE" />
+    <None Include="node_modules\mime-types\package.json" />
+    <None Include="node_modules\mime-types\README.md" />
+    <None Include="node_modules\mime\LICENSE" />
+    <None Include="node_modules\mime\package.json" />
+    <None Include="node_modules\mime\README.md" />
+    <None Include="node_modules\mime\types.json" />
+    <None Include="node_modules\morgan\HISTORY.md" />
+    <None Include="node_modules\morgan\LICENSE" />
+    <None Include="node_modules\morgan\package.json" />
+    <None Include="node_modules\morgan\README.md" />
+    <None Include="node_modules\ms\license.md" />
+    <None Include="node_modules\ms\package.json" />
+    <None Include="node_modules\ms\readme.md" />
+    <None Include="node_modules\negotiator\HISTORY.md" />
+    <None Include="node_modules\negotiator\LICENSE" />
+    <None Include="node_modules\negotiator\package.json" />
+    <None Include="node_modules\negotiator\README.md" />
+    <None Include="node_modules\on-finished\HISTORY.md" />
+    <None Include="node_modules\on-finished\LICENSE" />
+    <None Include="node_modules\on-finished\package.json" />
+    <None Include="node_modules\on-finished\README.md" />
+    <None Include="node_modules\on-headers\HISTORY.md" />
+    <None Include="node_modules\on-headers\LICENSE" />
+    <None Include="node_modules\on-headers\package.json" />
+    <None Include="node_modules\on-headers\README.md" />
+    <None Include="node_modules\parseurl\HISTORY.md" />
+    <None Include="node_modules\parseurl\LICENSE" />
+    <None Include="node_modules\parseurl\package.json" />
+    <None Include="node_modules\parseurl\README.md" />
+    <None Include="node_modules\path-to-regexp\History.md" />
+    <None Include="node_modules\path-to-regexp\LICENSE" />
+    <None Include="node_modules\path-to-regexp\package.json" />
+    <None Include="node_modules\path-to-regexp\Readme.md" />
+    <None Include="node_modules\proxy-addr\HISTORY.md" />
+    <None Include="node_modules\proxy-addr\LICENSE" />
+    <None Include="node_modules\proxy-addr\package.json" />
+    <None Include="node_modules\proxy-addr\README.md" />
+    <None Include="node_modules\qs\.editorconfig" />
+    <None Include="node_modules\qs\.eslintignore" />
+    <None Include="node_modules\qs\.eslintrc" />
+    <None Include="node_modules\qs\CHANGELOG.md" />
+    <None Include="node_modules\qs\LICENSE" />
+    <None Include="node_modules\qs\package.json" />
+    <None Include="node_modules\qs\README.md" />
+    <None Include="node_modules\qs\test\.eslintrc" />
+    <None Include="node_modules\range-parser\HISTORY.md" />
+    <None Include="node_modules\range-parser\LICENSE" />
+    <None Include="node_modules\range-parser\package.json" />
+    <None Include="node_modules\range-parser\README.md" />
+    <None Include="node_modules\raw-body\HISTORY.md" />
+    <None Include="node_modules\raw-body\LICENSE" />
+    <None Include="node_modules\raw-body\node_modules\depd\History.md" />
+    <None Include="node_modules\raw-body\node_modules\depd\LICENSE" />
+    <None Include="node_modules\raw-body\node_modules\depd\package.json" />
+    <None Include="node_modules\raw-body\node_modules\depd\Readme.md" />
+    <None Include="node_modules\raw-body\node_modules\http-errors\HISTORY.md" />
+    <None Include="node_modules\raw-body\node_modules\http-errors\LICENSE" />
+    <None Include="node_modules\raw-body\node_modules\http-errors\package.json" />
+    <None Include="node_modules\raw-body\node_modules\http-errors\README.md" />
+    <None Include="node_modules\raw-body\node_modules\setprototypeof\LICENSE" />
+    <None Include="node_modules\raw-body\node_modules\setprototypeof\package.json" />
+    <None Include="node_modules\raw-body\node_modules\setprototypeof\README.md" />
+    <None Include="node_modules\raw-body\package.json" />
+    <None Include="node_modules\raw-body\README.md" />
+    <None Include="node_modules\safe-buffer\.travis.yml" />
+    <None Include="node_modules\safe-buffer\LICENSE" />
+    <None Include="node_modules\safe-buffer\package.json" />
+    <None Include="node_modules\safe-buffer\README.md" />
+    <None Include="node_modules\send\HISTORY.md" />
+    <None Include="node_modules\send\LICENSE" />
+    <None Include="node_modules\send\package.json" />
+    <None Include="node_modules\send\README.md" />
+    <None Include="node_modules\serve-static\HISTORY.md" />
+    <None Include="node_modules\serve-static\LICENSE" />
+    <None Include="node_modules\serve-static\package.json" />
+    <None Include="node_modules\serve-static\README.md" />
+    <None Include="node_modules\setprototypeof\LICENSE" />
+    <None Include="node_modules\setprototypeof\package.json" />
+    <None Include="node_modules\setprototypeof\README.md" />
+    <None Include="node_modules\statuses\codes.json" />
+    <None Include="node_modules\statuses\HISTORY.md" />
+    <None Include="node_modules\statuses\LICENSE" />
+    <None Include="node_modules\statuses\package.json" />
+    <None Include="node_modules\statuses\README.md" />
+    <None Include="node_modules\type-is\HISTORY.md" />
+    <None Include="node_modules\type-is\LICENSE" />
+    <None Include="node_modules\type-is\package.json" />
+    <None Include="node_modules\type-is\README.md" />
+    <None Include="node_modules\unpipe\HISTORY.md" />
+    <None Include="node_modules\unpipe\LICENSE" />
+    <None Include="node_modules\unpipe\package.json" />
+    <None Include="node_modules\unpipe\README.md" />
+    <None Include="node_modules\utils-merge\.npmignore" />
+    <None Include="node_modules\utils-merge\LICENSE" />
+    <None Include="node_modules\utils-merge\package.json" />
+    <None Include="node_modules\utils-merge\README.md" />
+    <None Include="node_modules\vary\HISTORY.md" />
+    <None Include="node_modules\vary\LICENSE" />
+    <None Include="node_modules\vary\package.json" />
+    <None Include="node_modules\vary\README.md" />
+    <None Include="package-lock.json" />
+    <None Include="package.json" />
+    <None Include="public\images\favicons\manifest.json" />
+    <None Include="public\images\map-icons\45\45px-pins.zip" />
+    <None Include="public\images\map-icons\80\80px-pins.zip" />
+    <None Include="README.md" />
+    <None Include="views\about.ejs" />
+    <None Include="views\error.ejs" />
+    <None Include="views\index.ejs" />
+    <None Include="views\location.ejs" />
+    <None Include="views\locations\buddhist-temple.ejs" />
+    <None Include="views\locations\casl.ejs" />
+    <None Include="views\locations\ccamuseum.ejs" />
+    <None Include="views\locations\location-page.ejs" />
+    <None Include="views\locations\medicine.ejs" />
+    <None Include="views\locations\nine-dragon.ejs" />
+    <None Include="views\locations\puitak.ejs" />
+    <None Include="views\locations\st-therese.ejs" />
+    <None Include="views\map.ejs" />
+    <None Include="views\partials\content\about.ejs" />
+    <None Include="views\partials\footer.ejs" />
+    <None Include="views\partials\head.ejs" />
+    <None Include="views\partials\nav.ejs" />
+    <None Include="views\partials\scripts.ejs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\basic-auth\node_modules\safe-buffer\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\iconv-lite\lib\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\ipaddr.js\lib\ipaddr.js.d.ts" />
+    <TypeScriptCompile Include="node_modules\raw-body\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\setprototypeof\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

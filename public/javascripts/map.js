@@ -3,14 +3,14 @@
 
 var icon_dir = "/images/map-icons";
 
-var icon_size = 45;
+var icon_width = 45;
+var icon_height = Math.round(icon_width * 290 / 229); // The icons we're using are not square
 
 function make_icon_link (name) {
-	return icon_dir.concat("/").concat(icon_size.toString()).concat("/").concat(name);
+	return icon_dir.concat("/").concat(icon_width.toString()).concat("/").concat(name);
 }
 
 var locations = [
-	
 	{"name": "Nine Dragon Wall",
 	 "address": "158 W Cermak Rd",
 	 "position": {"lat": 41.853170000, "lng": -87.631345000},
@@ -70,7 +70,28 @@ var locations = [
 	 "address": "1700 S Wentworth Ave",
 	 "position": {"lat": 41.859115900, "lng": -87.632596900},
 	 "icon": make_icon_link("pingtom.png"),
-	 "link": ""}];
+	 "link": ""},
+    {"name": "Chinatown Library",
+     "address": "2100 S Wentworth Ave",
+     "position": {"lat": 41.853859, "lng": -87.632156},
+     "icon": make_icon_link("ChinatownLibrary.png"),
+     "link": ""},
+    {"name": "\"You are beautiful plaza\" for Mahjong",
+     "address": "2301 S Wentworth Ave",
+     "position": {"lat": 41.850930, "lng": -87.631840},
+     "icon": make_icon_link("YouAreBeautiful.png"),
+     "link": ""},
+    {"name": "Chinatown Gate",
+     "address": "2206 S Wentworth Ave",
+     "position": {"lat": 41.852610, "lng": -87.632170},
+     "icon": make_icon_link("ChinatownGate.png"),
+     "link": ""},
+    {"name": "Chinatown Chamber of Commerce",
+     "address": "2169B S China Pl",
+     "position": {"lat": 41.853530, "lng": -87.635130},
+     "icon": make_icon_link("ChinatownChamberofCommerce.png"),
+     "link": ""}
+];
 
 var location_elems = []; // Icons and maps added for locations
 
@@ -97,35 +118,39 @@ document.getElementById("map").appendChild(main_map);
 var map_width = main_map.offsetWidth;
 var map_height = main_map.offsetHeight;
 
-function mapOpen(v) {
+function mapOpen(idx) {
+    var v = locations[idx];
 	var elem=document.createElement("img");
 
 	var coords = translate_coords(v.position.lat, v.position.lng);
 
 	elem.src = v.icon;
-	elem.setAttribute("alt", "icon");
-	elem.setAttribute("usemap", "#clickable ".concat(v.name));
+	elem.setAttribute("alt", "");
+    elem.setAttribute("usemap", "#clickable ".concat(v.name));
 
 	elem.style.position = "absolute";
 
 	var rect = document.getElementById("main_map").getBoundingClientRect();
 	var doc_rect = document.documentElement.getBoundingClientRect();
 	
-	var x = (rect.left - doc_rect.left - icon_size / 2 + coords[1]);
-	var y = (rect.bottom - doc_rect.top - icon_size / 2 - coords[0]);
-	elem.style.width = icon_size.toString().concat("px");
-	elem.style.height = icon_size.toString().concat("px");
+	var x = (rect.left - doc_rect.left - icon_width / 2 + coords[1]);
+	var y = (rect.bottom - doc_rect.top - icon_height - coords[0]);
+	elem.style.width = icon_width.toString().concat("px");
+	elem.style.height = icon_height.toString().concat("px");
 	elem.style.top = y.toString().concat("px");
 	elem.style.left = x.toString().concat("px");
 	document.getElementById("map").appendChild(elem);
 
-	var clickable = document.createElement("map");
+    var clickable = document.createElement("map");
+
 	clickable.setAttribute("name", "clickable ".concat(v.name));
 	document.getElementById("map").appendChild(clickable);
 	
-	var click_area = document.createElement("area");
+    var click_area = document.createElement("area");
+    click_area.setAttribute("onmouseenter", "iconToFront(".concat(idx.toString().concat(")")));
+
 	click_area.setAttribute("shape", "rect");
-	click_area.setAttribute("coords", "0,0,".concat(icon_size.toString()).concat(",").concat(icon_size.toString()));
+	click_area.setAttribute("coords", "0,0,".concat(icon_width.toString()).concat(",").concat(icon_height.toString()));
 	click_area.setAttribute("href", v.link);
 	clickable.appendChild(click_area);
 
@@ -143,16 +168,17 @@ function translate_coords(latitude, longitude) {
 
 function load_locs() {
 	for (var loc = 0; loc < locations.length; loc++) {
-		mapOpen(locations[loc]);
+		mapOpen(loc);
 	}
 }
 
 function erase_locs() {
-	for (var i = 0; i < location_elems.length; i++) {
-		if (location_elems[i].parentNode != null) {
-			location_elems[i].parentNode.removeChild(location_elems[i]);
-		}
+    for (var i = 0; i < location_elems.length; i++) {
+	if (location_elems[i].parentNode != null) {
+	    location_elems[i].parentNode.removeChild(location_elems[i]);
 	}
+    }
+    location_elems = [];
 }
 
 function refresh_locs() {
@@ -160,6 +186,13 @@ function refresh_locs() {
     map_height = main_map.offsetHeight;
     erase_locs();
     load_locs();
+}
+
+function iconToFront(idx) {
+    mapOpen(idx);
+    if (location_elems.length > 10000) {
+	refresh_locs();
+    }
 }
 
 setTimeout(function(){ load_locs(); }, 300);
