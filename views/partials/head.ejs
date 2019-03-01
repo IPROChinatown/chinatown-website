@@ -29,6 +29,7 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
@@ -68,7 +69,126 @@
     text-decoration: none;
     cursor: pointer;
     }
-
     .button:hover {opacity: 1}
   </style>
+    
+    <!-- limit text length -->
+    <style>
+      .textL {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         line-height: 16px;     /* fallback */
+         max-height: 32px;      /* fallback */
+         -webkit-line-clamp: 5; /* number of lines to show */
+         -webkit-box-orient: vertical;
+      }
+    </style>
+
+      <!-- text wrap css-->
+    <style>
+      .show-hide-text {
+      display: flex;
+      flex-wrap: wrap;
+      }
+
+      .show-hide-text a {
+      order: 2;
+      }
+
+      .show-hide-text p {
+      position: relative;
+      overflow: hidden;
+      max-height: 240px; // The Height of ? rows
+      }
+
+      .show-hide-text p {
+      display: -webkit-box;
+      -webkit-line-clamp: 7; // ? Rows of text
+      -webkit-box-orient: vertical;
+      }
+
+      .show-less-en {
+      display: none;
+      }
+
+      .show-less-en:target {
+      display: block;
+      }
+
+      .show-less-en:target ~ p {
+      display: block;
+      max-height: 100%;
+      }
+
+      .show-less-en:target + a {
+      display: none;
+      }
+      
+       .show-less-zhs {
+      display: none;
+      }
+
+      .show-less-zhs:target {
+      display: block;
+      }
+
+      .show-less-zhs:target ~ p {
+      display: block;
+      max-height: 100%;
+      }
+
+      .show-less-zhs:target + a {
+      display: none;
+      }
+      
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0;
+    </style>
+
+  <!--scroll to top-->
+    <style>
+      #return-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.7);
+      width: 50px;
+      height: 50px;
+      display: block;
+      text-decoration: none;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      border-radius: 35px;
+      display: none;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      z-index:10
+      }
+      #return-to-top i {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      left: 16px;
+      top: 13px;
+      font-size: 19px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      }
+      #return-to-top:hover {
+      background: rgba(0, 0, 0, 0.9);
+      }
+      #return-to-top:hover i {
+      color: #fff;
+      top: 5px;
+      }
+    </style>
+    
 </head>

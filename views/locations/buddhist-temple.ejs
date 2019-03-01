@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html>
-<% include ../partials/head %>
-
-<body class="text-black base-font-size">
-	<div class="wrapper mx-auto h-100">
-		<% include ../partials/nav %>
-		<div class="en">
-		    <div class="container py-5">
-			<div class="row">
-			    <div class="col pull-right">
-				<h1>Buddhist Friendship Association/ Chicago Zhengjue Temple</h1>
-				<p>The Zhengjue Temple is the only Buddhist temple in Chinatown, developed in 2004 by the Buddhist Friendship Association. The original temple was on the northside of Chicago and formed by Vietnamese Chinese Buddhists in 1992. The location of the temple was challenging for the Chinese Buddhist immigrants residing in Chinatown because of the inconvenient transportation system and lengthy travel time. Up until the development of the temple in Chinatown, the believers within the community had difficulties in practicing their devotion. They needed one in their own community. The original temple was sold, and the current location was established. The temple, founded by Vietnamese Chinese believers, is now supported and respected by the majority of Chinese.</p>
-			    </div>
-			    <div class="col">
-				<img src="/images/locations/buddhist-temple-1.jpg" class="img-fluid rounded" alt="inside of international Buddhist friendship association enlightenment temple">
-			    </div>
-			</div>
-			<p>Today, the Buddhist Friendship Association has 300 members <span id="dots">...</span><span id="more"> and with the inclusion of Dharam in Chinese and English, the practice of Buddhism is rising. The association plays an important role in the community. In addition to Buddhist lecture and practice guidance, they offer services such as disaster relief, blessing, funeral arrangements and vending auspicious items like incense, wooden fish, charms, ashes and more. Furthermore, the association participates in improvements and growth of the Chinatown community, in hopes to persevere the safety in the community. As Chicago’s Chinatown grows, the temple plans to grow with the community by developing an exhibit in the near future, where Chinese Buddhist culture can be available to all.
-				<br>
-				<br>
-				<font size="4"><strong>Household Shrines</strong></font>
-				<br>
-				<br>
-				In Buddhism, a shrine refers to a place where worshiping is focused on the Buddha or one of the bodhisattvas. On the shrine, you may find candles, flowers, purified water, food or incense. These items are offerings brought by Monks, nuns, and laypeople placed to create good fortune and strong mind. Often the offering performed are in preparation for mediation. It is said that the shrine reminds us to surrender the negatives in our lives so that we can feel peace, serenity, freedom and light.
-				<br>
-				<br>
-				<font size="4"><strong>Joss Papers</strong></font>
-				<br>
-				<br>
-				In the Buddhist mythology, the dead must pass the judgment by Yanluo, a wrathful god, a King of Hell. The joss paper, also known as ‘spirit’ money, is burned or buried at the funeral as an offering. It has been noted that the offering can be used to bribe Yanluo, in hopes to shorten the imprisonment sentence or to purchase luxuries and necessities needed for a comfortable afterlife. The joss paper is about supporting and helping ancestors to have all they will need in the afterlife. Besides funerals, the paper is burned on the special holidays during traditional Chinese deity or ancestor worship ceremonies.
-				<br>
-				<br>
-				The spirit money is traditionally made from coarse bamboo paper, but rice paper is commonly used today. The paper is cut into squares or rectangles, each have a thin piece of square foil or a traditional red Chinese seal in the center. The paper is white to represent the mourning of the deceased, and the square foils are either silver or gold, representing the wealth or money. Another appearance form of joss paper is "gold paper", shaped like ingots or towers. The spirit money and objects are used as a symbol of transformation, by burning it, it increases its value and serves as a payment of spiritual debts.
-				
-				<!-- <img src="/images/locations/buddhist-temple-2.jpg" class="img-fluid rounded" alt="Joss Paper"> -->
-				</span></p>
-				<button onclick="readMoreFunction()"  class="button" id="moreBtn">Read more</button>
-				<!-- <script src="/javascripts/readmore.js"></script> -->
-				
-			
-			</div>	
+    <% include ../partials/head %>
+    <body class="text-black base-font-size wrapper mx-auto h-100">
+	<a href="javascript:scrollToTop();" id="return-to-top"><i class="icon-chevron-up"></i></a>
+	<% include ../partials/nav %>
+	<div class="en container py-5">
+	    <div class="row">
+		<div class="col">
+		    <div class="show-hide-text">
+			<a  id="show-more-en" class="show-less-en" href="#show-less-en">Show less</a>
+			<a  id="show-less-en" class="show-more-en" href="#show-more-en">Show more</a>
+			<p>
+			    <font size="4"><strong>Buddhist Friendship Association/ Chicago Zhengjue Temple</strong></font>
+			    <br> <br>
+			    The Zhengjue Temple is the only Buddhist temple in Chinatown, developed in 2004 by the Buddhist Friendship Association. The original temple was on the northside of Chicago and formed by Vietnamese Chinese Buddhists in 1992. The location of the temple was challenging for the Chinese Buddhist immigrants residing in Chinatown because of the inconvenient transportation system and lengthy travel time. Up until the development of the temple in Chinatown, the believers within the community had difficulties in practicing their devotion. They needed one in their own community. The original temple was sold, and the current location was established. The temple, founded by Vietnamese Chinese believers, is now supported and respected by the majority of Chinese.
+			    <br> <br>
+			    Today, the Buddhist Friendship Association has 300 members and with the inclusion of Dharam in Chinese and English, the practice of Buddhism is rising. The association plays an important role in the community. In addition to Buddhist lecture and practice guidance, they offer services such as disaster relief, blessing, funeral arrangements and vending auspicious items like incense, wooden fish, charms, ashes and more. Furthermore, the association participates in improvements and growth of the Chinatown community, in hopes to persevere the safety in the community. As Chicago’s Chinatown grows, the temple plans to grow with the community by developing an exhibit in the near future, where Chinese Buddhist culture can be available to all.
+			    <br> <br>
+			    <font size="4"><strong>Household Shrines</strong></font>
+			    <br> <br>
+			    In Buddhism, a shrine refers to a place where worshiping is focused on the Buddha or one of the bodhisattvas. On the shrine, you may find candles, flowers, purified water, food or incense. These items are offerings brought by Monks, nuns, and laypeople placed to create good fortune and strong mind. Often the offering performed are in preparation for mediation. It is said that the shrine reminds us to surrender the negatives in our lives so that we can feel peace, serenity, freedom and light.
+			    <br> <br>
+			    <font size="4"><strong>Joss Papers</strong></font>
+			    <br> <br>
+			    In the Buddhist mythology, the dead must pass the judgment by Yanluo, a wrathful god, a King of Hell. The joss paper, also known as ‘spirit’ money, is burned or buried at the funeral as an offering. It has been noted that the offering can be used to bribe Yanluo, in hopes to shorten the imprisonment sentence or to purchase luxuries and necessities needed for a comfortable afterlife. The joss paper is about supporting and helping ancestors to have all they will need in the afterlife. Besides funerals, the paper is burned on the special holidays during traditional Chinese deity or ancestor worship ceremonies.
+			    <br> <br>
+			    The spirit money is traditionally made from coarse bamboo paper, but rice paper is commonly used today. The paper is cut into squares or rectangles, each have a thin piece of square foil or a traditional red Chinese seal in the center. The paper is white to represent the mourning of the deceased, and the square foils are either silver or gold, representing the wealth or money. Another appearance form of joss paper is "gold paper", shaped like ingots or towers. The spirit money and objects are used as a symbol of transformation, by burning it, it increases its value and serves as a payment of spiritual debts.
+			</p>
+		    </div>
 		</div>
-		<div class="zh_HANS">
-		    <div class="container py-5">
-			<div class="row">
-				    <div class="col pull-right">
-					<h1>芝加哥正觉寺</h1>
-					<p>正觉寺是唐人街唯一的一座佛教寺院，是由佛教协会在2004年成立的。最初的寺庙位于芝加哥北部，1992年由越南华人佛教徒组成。这座寺庙的位置对居住在唐人街的中国佛教移民来说是一个挑战，因为交通不便，行驶时间长。在唐人街的寺庙发展之前，社区内的信徒们很难实践他们的奉献。他们需要一座在他们自己的社区。原来的寺庙被卖掉了，现在的位置也建好了。这座寺庙由越南华人信徒建立，现在得到了大多数中国人的支持和尊重。</p>
-						<p>如今，佛教友谊协会已有300名会员，在中英两种语言中加入了达摩，佛教实践正在兴起。协会在社区中发挥了重要作用。除了佛教讲座和实践指导外，他们还提供救灾、祈福、葬礼安排和售卖吉祥物品，如香、木鱼、护身符、骨灰等。此外，协会也参与了唐人街社区的改善和发展，希望能保持社区的安全。随着芝加哥唐人街的发展，寺庙计划在不久的将来与社区一起呈现一个展览，让大家对中国佛教文化有更多的认识。</p>
-					</div>
-					<div class="col">
-						<img src="/images/locations/buddhist-temple.jpg" class="img-fluid rounded" alt="Picture of Nine Dragon Wall">
-					</div>
-				</div>
-				<h1>家庭神龛</h1>
-				<p>在佛教中，神龛是指供奉佛或<span id="dot">...</span><span id="moreZh">菩萨的地方。在神龛上，你可以找到蜡烛、鲜花、纯净水、食物或香。这些贡品为人们带来了好运。神龛提醒我们放弃生活中的消极，这样我们就能感受到和平、宁静、自由和光明。
-				<br>
-				<br>
-				<font size="4"><strong>纸钱</strong></font>
-				<br>
-				<br>
-				在佛教神话中，死者必须通过阎罗王的审判。纸钱,也被称为神钱,焚烧或掩埋在葬礼上为祭。该祭品可以用来贿赂阎罗王，希望缩短刑期，或者用来购买奢侈品和生活必需品，以获得一个舒适的来世。纸钱是关于支持和帮助祖先们拥有他们在来世所需要的一切。除了葬礼，纸钱是在中国传统的神祇或祭祖仪式的特殊节日焚烧
-				<br>
-				<br>
-				传统的纸钱是用粗竹纸做的，但目前常用的是米纸。纸被切成正方形或长方形，每张都有一个薄薄的方形箔片或传统的红色中国印在中心。纸为白色，代表死者的哀悼，正方形箔是银或金，代表财富或金钱。另一种纸的外观形式是“金纸”，形状像锭或塔。纸钱和物品被用作转化的象征，通过燃烧它，它会增加它的价值并作为精神债务的偿还。</span></p>
-				
-				<button onclick="readMoreFunctionZh()" class="button" id="moreBtnZh">更多</button>
-				<!-- <script src="/javascripts/readmoreZh.js"></script> -->
-				
-			</div>
+		<div class="col">
+		    <img src="/images/locations/buddhist-temple-1.jpg" class="img-fluid rounded" alt="inside of international Buddhist friendship association enlightenment temple">
+                    <!-- <img src="/images/locations/buddhist-temple-2.jpg" class="img-fluid rounded" alt="Joss Paper"> -->
 		</div>
-		
-		<% include ../partials/footer %>
-		<% include ../partials/scripts %>
-		
+	    </div>
 	</div>
-	
-	
-</body>
-
+	<div class="zh_HANS container py-5">
+	    <div class="row">
+		<div class="col">
+		    <div class="show-hide-text">
+			<a  id="show-more-zhs" class="show-less-zhs" href="#show-less-zhs">收起</a>
+			<a  id="show-less-zhs" class="show-more-zhs" href="#show-more-zhs">展开</a>
+			<p>
+			    <font size="4"><strong>芝加哥正觉寺</strong></font>
+			    <br>
+			    正觉寺是唐人街唯一的一座佛教寺院，是由佛教协会在2004年成立的。最初的寺庙位于芝加哥北部，1992年由越南华人佛教徒组成。这座寺庙的位置对居住在唐人街的中国佛教移民来说是一个挑战，因为交通不便，行驶时间长。在唐人街的寺庙发展之前，社区内的信徒们很难实践他们的奉献。他们需要一座在他们自己的社区。原来的寺庙被卖掉了，现在的位置也建好了。这座寺庙由越南华人信徒建立，现在得到了大多数中国人的支持和尊重。
+			    <br>
+			    如今，佛教友谊协会已有300名会员，在中英两种语言中加入了达摩，佛教实践正在兴起。协会在社区中发挥了重要作用。除了佛教讲座和实践指导外，他们还提供救灾、祈福、葬礼安排和售卖吉祥物品，如香、木鱼、护身符、骨灰等。此外，协会也参与了唐人街社区的改善和发展，希望能保持社区的安全。随着芝加哥唐人街的发展，寺庙计划在不久的将来与社区一起呈现一个展览，让大家对中国佛教文化有更多的认识。
+			    <br>
+			    <font size="4"><strong>家庭神龛</strong></font>
+			    <br>
+			    在佛教中，神龛是指供奉佛或菩萨的地方。在神龛上，你可以找到蜡烛、鲜花、纯净水、食物或香。这些贡品为人们带来了好运。神龛提醒我们放弃生活中的消极，这样我们就能感受到和平、宁静、自由和光明。
+			    <br> <br>
+			    <font size="4"><strong>纸钱</strong></font>
+			    <br> <br>
+			    在佛教神话中，死者必须通过阎罗王的审判。纸钱,也被称为神钱,焚烧或掩埋在葬礼上为祭。该祭品可以用来贿赂阎罗王，希望缩短刑期，或者用来购买奢侈品和生活必需品，以获得一个舒适的来世。纸钱是关于支持和帮助祖先们拥有他们在来世所需要的一切。除了葬礼，纸钱是在中国传统的神祇或祭祖仪式的特殊节日焚烧
+			    <br> <br>
+			    传统的纸钱是用粗竹纸做的，但目前常用的是米纸。纸被切成正方形或长方形，每张都有一个薄薄的方形箔片或传统的红色中国印在中心。纸为白色，代表死者的哀悼，正方形箔是银或金，代表财富或金钱。另一种纸的外观形式是“金纸”，形状像锭或塔。纸钱和物品被用作转化的象征，通过燃烧它，它会增加它的价值并作为精神债务的偿还。</p>
+		    </div>
+		</div>
+		<div class="col">
+		    <img src="/images/locations/buddhist-temple-1.jpg" class="img-fluid rounded" alt="inside of international Buddhist friendship association enlightenment temple">
+                    <!-- <img src="/images/locations/buddhist-temple-2.jpg" class="img-fluid rounded" alt="Joss Paper"> -->
+		</div>
+	    </div>
+	</div>
+	<div class="zh_HANT container py-5">
+	    <div class="row">
+		<div class="col pull-right">
+		    <div class="show-hide-text">
+			<a  id="show-more" class="show-less" href="#show-less">Show less</a>
+			<a  id="show-less" class="show-more" href="#show-more">Show more</a>
+			<p>
+			    <font size="4"><strong>芝加哥正覺寺</strong></font>
+			    <br>
+			    正覺寺是唐人街唯一的一座佛教寺院，是由佛教協會在2004年成立的。最初的寺廟位於芝加哥北部，1992年由越南華人佛教徒組成。這座寺廟的位置對居住在唐人街的中國佛教移民來說是一個挑戰，因為交通不便，行駛時間長。在唐人街的寺廟發展之前，社區內的信徒們很難實踐他們的奉獻。他們需要一座在他們自己的社區。原來的寺廟被賣掉了，現在的位置也建好了。這座寺廟由越南華人信徒建立，現在得到了大多數中國人的支持和尊重。
+			    <br>
+			    如今，佛教友誼協會已有300名會員，在中英兩種語言中加入了達摩，佛教實踐正在興起。協會在社區中發揮了重要作用。除了佛教講座和實踐指導外，他們還提供救災、祈福、葬禮安排和售賣吉祥物品，如香、木魚、護身符、骨灰等。此外，協會也參與了唐人街社區的改善和發展，希望能保持社區的安全。隨著芝加哥唐人街的發展，寺廟計畫在不久的將來與社區一起呈現一個展覽，讓大家對中國佛教文化有更多的認識。
+			    <br> <br>
+			    <font size="4"><strong>家庭神龕</strong></font>
+			    <br> <br>
+			    在佛教中，神龕是指供奉佛或菩薩的地方。在神龕上，你可以找到蠟燭、鮮花、純淨水、食物或香。這些貢品為人們帶來了好運。神龕提醒我們放弃生活中的消極，這樣我們就能感受到和平、寧靜、自由和光明。
+			    <br> <br>
+			    <font size="4"><strong>紙錢</strong></font>
+			    <br> <br>
+			    在佛教神話中，死者必須通過閻羅王的審判。紙錢，也被稱為神錢，焚燒或掩埋在葬禮上為祭。該祭品可以用來賄賂閻羅王，希望縮短刑期，或者用來購買奢侈品和生活必需品，以獲得一個舒適的來世。紙錢是關於支持和幫助祖先們擁有他們在來世所需要的一切。除了葬禮，紙錢是在中國傳統的神只或祭祖儀式的特殊節日焚燒。
+			    <br> <br>
+			    傳統的紙錢是用粗竹紙做的，但現時常用的是米紙。紙被切成正方形或長方形，每張都有一個薄薄的方形箔片或傳統的紅色中國印在中心。紙為白色，代表死者的哀悼，正方形箔是銀或金，代表財富或金錢。另一種紙的外觀形式是“金紙”，形狀像錠或塔。紙錢和物品被用作轉化的象徵，通過燃燒它，它會新增它的價值並作為精神債務的償還。</p>
+		    </div>
+		</div>
+	    </div>
+	</div>
+	<% include ../partials/footer %>
+	<% include ../partials/scripts %>
+    </body>
 </html>
