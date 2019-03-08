@@ -10,6 +10,17 @@ function make_icon_link (name) {
     return icon_dir.concat("/").concat(icon_width.toString()).concat("/").concat(name);
 }
 
+var location_elems = []; // Icons and maps added for locations
+
+var origin_lat = 41.848;
+var origin_long = -87.6400;
+
+var origin_lat_end = 41.8595;
+var origin_long_end = -87.6300;
+
+var map_width_coords = origin_long_end - origin_long;
+var map_height_coords = origin_lat_end - origin_lat;
+
 var locations = [
     {"name": "Nine Dragon Wall",
      "address": "158 W Cermak Rd",
@@ -68,7 +79,7 @@ var locations = [
      "link": ["locations/casl", "locations/cbcac"]},
     {"name": "Ping Tom Park",
      "address": "1700 S Wentworth Ave",
-     "position": {"lat": 41.859115900, "lng": -87.632596900},
+     "position": {"lat": 41.856500900, "lng": -87.634700000},
      "icon": make_icon_link("pingtom.png"),
      "link": [""]},
     {"name": "Chinatown Library",
@@ -90,19 +101,13 @@ var locations = [
      "address": "2169B S China Pl",
      "position": {"lat": 41.853530, "lng": -87.635130},
      "icon": make_icon_link("ChinatownChamberofCommerce.png"),
-     "link": [""]}
+     "link": [""]},
+    {"name": "Stories",
+     "address": "2169B S China Pl",
+     "position": {"lat": (origin_lat + origin_lat_end) / 2, "lng": (origin_long + origin_long_end) / 2},
+     "icon": make_icon_link("story.png"),
+     "link": ["/stories"]}
 ];
-
-var location_elems = []; // Icons and maps added for locations
-
-var origin_lat = 41.848;
-var origin_long = -87.6400;
-
-var origin_lat_end = 41.8595;
-var origin_long_end = -87.6300;
-
-var map_width_coords = origin_long_end - origin_long;
-var map_height_coords = origin_lat_end - origin_lat;
 
 var main_map = document.createElement("img");
 main_map.setAttribute("alt", "map");
@@ -232,7 +237,8 @@ function refresh_locs() {
     map_width = main_map.offsetWidth;
     map_height = main_map.offsetHeight;
     erase_locs();
-    load_locs();
+    setTimeout(function(){ load_locs(); }, 500);
+    /* load_locs();*/
 }
 
 function iconToFront(idx) {
@@ -242,6 +248,7 @@ function iconToFront(idx) {
     }
 }
 
-setTimeout(function(){ load_locs(); }, 300);
+setTimeout(function(){ load_locs(); }, 500);
 
 window.onresize = refresh_locs;
+window.onclick = refresh_locs; // Expanding menu messes up icon position by moving map position, so whenever you click something we refresh locations.

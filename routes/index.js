@@ -7,8 +7,13 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About Chinatown' });
+/* router.get('/about', function(req, res, next) {
+ *   res.render('about', { title: 'About Chinatown' });
+ * });*/
+
+/* GET story index page. */
+router.get('/stories', function(req, res, next) {
+  res.render('stories', { title: 'Chinatown Stories' });
 });
 
 /* GET location page. */
@@ -21,16 +26,10 @@ router.get('/map', function(req, res, next) {
   res.render('map', { title: 'Maps' });
 });
 
-
-/* GET nine-dragon page. */
-// router.get('/locations/', function(req, res, next) {
-//   res.render('nine-dragon', { title: 'Nine Dragon Wall' });
-// });
-
-/* GET st-therese page. */
-// router.get('/locations/', function(req, res, next) {
-//   res.render('st-therese', { title: 'St. Therese' });
-// });
+/* GET contact info page. */
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contact' });
+});
 
 /* GET individual location pages. */
 var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "commerce", "tradition-objects","youthGroup", "familyAssoc"]
