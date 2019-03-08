@@ -33,7 +33,7 @@ router.get('/map', function(req, res, next) {
 // });
 
 /* GET individual location pages. */
-var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "commerce", "tradition-objects","youthGroup"]
+var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "commerce", "tradition-objects","youthGroup", "familyAssoc"]
 
 function make_loc_router (loc) {
 	router.get("/locations/".concat(loc), function(req, res, next) {
