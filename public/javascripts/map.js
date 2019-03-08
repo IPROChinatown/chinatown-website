@@ -86,12 +86,7 @@ var locations = [
      "address": "2100 S Wentworth Ave",
      "position": {"lat": 41.853859, "lng": -87.632156},
      "icon": make_icon_link("ChinatownLibrary.png"),
-     "link": [""]},
-    {"name": "\"You are beautiful plaza\" for Mahjong",
-     "address": "2301 S Wentworth Ave",
-     "position": {"lat": 41.850930, "lng": -87.631840},
-     "icon": make_icon_link("YouAreBeautiful.png"),
-     "link": [""]},
+     "link": ["/stories#library"]},
     {"name": "Chinatown Gate",
      "address": "2206 S Wentworth Ave",
      "position": {"lat": 41.852610, "lng": -87.632170},
@@ -102,11 +97,16 @@ var locations = [
      "position": {"lat": 41.853530, "lng": -87.635130},
      "icon": make_icon_link("ChinatownChamberofCommerce.png"),
      "link": [""]},
-    {"name": "Stories",
-     "address": "2169B S China Pl",
-     "position": {"lat": (origin_lat + origin_lat_end) / 2, "lng": (origin_long + origin_long_end) / 2},
+    {"name": "Allen Lee Plaza", // \"You are beautiful plaza\" for Mahjong
+     "address": "2301 S Wentworth Ave",
+     "position": {"lat": 41.850930, "lng": -87.631840},
      "icon": make_icon_link("story.png"),
-     "link": ["/stories"]}
+     "link": ["/stories#plaza"]},
+    {"name": "Sun Yat-Sen Park",
+     "address": "251 W 24th Pl, Chicago, IL 60616",
+     "position": {"lat": 41.848148, "lng": -87.633354},
+     "icon": make_icon_link("story.png"),
+     "link": ["/stories#park"]}
 ];
 
 var main_map = document.createElement("img");
