@@ -36,7 +36,7 @@ var locations = [
      "address": "2301 S Wentworth Ave",
      "position": {"lat": 41.850719000, "lng": -87.631671600},
      "icon": make_icon_link("ccuc.png"),
-     "link": [""]},
+     "link": ["#"]},
     {"name": "Chinese Medicine",
      "address": "2400 S Wentworth Ave",
      "position": {"lat": 41.849052000, "lng": -87.632070700},
@@ -71,7 +71,7 @@ var locations = [
      "address": "2133 S China Pl",
      "position": {"lat": 41.853490, "lng": -87.635407},
      "icon": make_icon_link("plaza.png"),
-     "link": [""]},
+     "link": ["#"]},
     {"name": "Chinese American Service League / CBCAC",
      "address": "2141 S Tan Ct",
      "position": {"lat": 41.854406300, "lng": -87.635565500},
@@ -81,7 +81,7 @@ var locations = [
      "address": "1700 S Wentworth Ave",
      "position": {"lat": 41.856500900, "lng": -87.634700000},
      "icon": make_icon_link("pingtom.png"),
-     "link": [""]},
+     "link": ["#"]},
     {"name": "Chinatown Library",
      "address": "2100 S Wentworth Ave",
      "position": {"lat": 41.853859, "lng": -87.632156},
@@ -91,12 +91,12 @@ var locations = [
      "address": "2206 S Wentworth Ave",
      "position": {"lat": 41.852610, "lng": -87.632170},
      "icon": make_icon_link("ChinatownGate.png"),
-     "link": [""]},
+     "link": ["#"]},
     {"name": "Chinatown Chamber of Commerce",
      "address": "2169B S China Pl",
      "position": {"lat": 41.853530, "lng": -87.635130},
      "icon": make_icon_link("ChinatownChamberofCommerce.png"),
-     "link": [""]},
+     "link": ["#"]},
     {"name": "Allen Lee Plaza", // \"You are beautiful plaza\" for Mahjong
      "address": "2301 S Wentworth Ave",
      "position": {"lat": 41.850930, "lng": -87.631840},
@@ -123,50 +123,23 @@ document.getElementById("map").appendChild(main_map);
 var map_width = main_map.offsetWidth;
 var map_height = main_map.offsetHeight;
 
-document.addEventListener("click", getPosition, false);
-
-// Does this work?
-function getPosition(el) {
-    var xPosition = 0;
-    var yPosition = 0;
-
-    while (el) {
-	if (el.tagname == "BODY") {
-	    var xScrollPos = el.scrollLeft || document.documentElement.scrollLeft;
-	    var yScrollPos = el.scrollTop || document.documentElement.scrollTop;
-
-	    xPosition += (el.offsetLeft - xScrollPos + el.clientLeft);
-	    yPosition += (el.offsetTop - yScrollPos + el.clientTop);
-	}
-	else {
-	    xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
-	    yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
-	}
-
-	el = el.offsetParent;
+function iconDialogue(idx) {
+    translate_coords(locations[idx].position.lat, locations[idx].position.lng);
+    // Get x position and y position?
+    links = locations[idx].link;
+    if (links.length > 1) {
+        msgString = '<ul>';
+        for (var i = 0; i < links.length; i++) {
+            // links[i] is not escaped, so it should be changed carefully
+            msgString += '<li><a href=' + links[i] + '>' + links[i] + '</a></li>';
+        }
+        msgString += '</ul>';
+        vex.dialog.alert({ unsafeMessage: msgString });
     }
-
-    return {
-	x: xPosition,
-	y: yPosition
-    };
+    else {
+        window.open(links[0], "_self");
+    }
 }
-
-/* function iconDialogue(idx) {
- *     alert("hello")
- *     // Get x position and y position?
- *     links = locations[idx].link;
- *     var link_list=document.createElement("ul");
- *     link_list.style.position = "absolute";
- *     link_list.style.left = window.event.clientX;
- *     link_list.style.top = window.event.clientY;
- * 
- *     var link_elem_list = [];
- *     for (var i = 0; i < links.length; i++) {
- *         link_elem_list[i]=document.createElement("a");
- *         link_elem_list[i].setAttribute("href", links[i]);
- *     }
- * }*/
 
 function mapOpen(idx) {
     var v = locations[idx];
@@ -201,9 +174,8 @@ function mapOpen(idx) {
 
     click_area.setAttribute("shape", "rect");
     click_area.setAttribute("coords", "0,0,".concat(icon_width.toString()).concat(",").concat(icon_height.toString()));
-    /* click_area.setAttribute("onclick", "iconDialogue(".concat(idx.toString()).concat(")"));
-     * click_area.setAttribute("href", "#");*/
-    click_area.setAttribute("href", v.link[0]);
+    click_area.setAttribute("onclick", "iconDialogue(".concat(idx.toString()).concat(")"));
+    click_area.setAttribute("href", "#");
     clickable.appendChild(click_area);
 
     location_elems.push(elem);
