@@ -76,7 +76,7 @@ var locations = [
      "address": "2141 S Tan Ct",
      "position": {"lat": 41.854406300, "lng": -87.635565500},
      "icon": make_icon_link("casl.png"),
-     "link": ["locations/casl", "locations/cbcac"]},
+     "link": ["locations/casl", "locations/cbcac", "locations/youthGroup"]},
     {"name": "Ping Tom Park",
      "address": "1700 S Wentworth Ave",
      "position": {"lat": 41.856500900, "lng": -87.634700000},
@@ -96,7 +96,7 @@ var locations = [
      "address": "2169B S China Pl",
      "position": {"lat": 41.853530, "lng": -87.635130},
      "icon": make_icon_link("ChinatownChamberofCommerce.png"),
-     "link": ["#"]},
+     "link": ["/locations/commerce"]},
     {"name": "Allen Lee Plaza", // \"You are beautiful plaza\" for Mahjong
      "address": "2301 S Wentworth Ave",
      "position": {"lat": 41.850930, "lng": -87.631840},
