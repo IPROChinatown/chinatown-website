@@ -2,7 +2,7 @@
 // or neighboring rights to this program via CC0
 
 var lang_selected = 0;
-var lang_list = ["English", "Simplified Chinese"];//, "Traditional Chinese"];
+var lang_list = ["English", "Simplified Chinese", "Traditional Chinese"];
 
 // Select language from cookie if possible
 var page = parent.document
