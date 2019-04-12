@@ -44,4 +44,17 @@ for (l = 0; l < locs.length; l++) {
 	make_loc_router(locs[l]);
 }
 
+/* GET individual story pages. */
+var stories = ["Hailan-Yu", "Madison-Chan", "Michael-Zhao", "Preston-Yuen", "Renee-Zhao", "Ryan-Daly", "Xiaolynn-Zhen"]
+
+function make_story_router (name) {
+	router.get("/stories/".concat(name), function(req, res, next) {
+		res.render("stories/".concat(name), { title: name });
+	});
+}
+
+for (s = 0; s < stories.length; s++) {
+	make_story_router(stories[s]);
+}
+
 module.exports = router;
