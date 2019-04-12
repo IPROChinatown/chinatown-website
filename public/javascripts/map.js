@@ -26,7 +26,8 @@ var locations = [
      "address": "158 W Cermak Rd",
      "position": {"lat": 41.853170000, "lng": -87.631345000},
      "icon": make_icon_link("dragonwall.png"),
-     "link": ["locations/nine-dragon"]},
+     "link": [["locations/nine-dragon", "Nine Dragon Wall"],
+              ["locations/newYearParade", "New Year Parade", "中国新年", "New Year Parade"]]},
     {"name": "Buddhist Friendship Temple",
      "address": "2249 S Wentworth Ave",
      "position": {"lat": 41.851436200, "lng": -87.631652300},
@@ -71,17 +72,22 @@ var locations = [
      "address": "2133 S China Pl",
      "position": {"lat": 41.853490, "lng": -87.635407},
      "icon": make_icon_link("plaza.png"),
-     "link": ["#"]},
+     "link": ["locations/chineseZodiac"]},
     {"name": "Chinese American Service League / CBCAC",
      "address": "2141 S Tan Ct",
      "position": {"lat": 41.854406300, "lng": -87.635565500},
      "icon": make_icon_link("casl.png"),
-     "link": ["locations/casl", "locations/cbcac", "locations/youthGroup"]},
+     "link": [["locations/casl", "Chinese American Service League", "华裔美国人服务联盟", "華裔美國人服務聯盟"], ["locations/cbcac", "CBCAC"], ["locations/youthGroup", "Origin Youth Group"]]},
     {"name": "Ping Tom Park",
      "address": "1700 S Wentworth Ave",
      "position": {"lat": 41.856500900, "lng": -87.634700000},
      "icon": make_icon_link("pingtom.png"),
      "link": ["#"]},
+    /* {"name": "",
+     *  "address": "",
+     *  "position": {"lat": , "lng": },
+     *  "icon": make_icon_link(""),
+     *  "link": ["locations/damaDancers"]},*/
     {"name": "Chinatown Library",
      "address": "2100 S Wentworth Ave",
      "position": {"lat": 41.853859, "lng": -87.632156},
@@ -91,7 +97,7 @@ var locations = [
      "address": "2206 S Wentworth Ave",
      "position": {"lat": 41.852610, "lng": -87.632170},
      "icon": make_icon_link("ChinatownGate.png"),
-     "link": ["#"]},
+     "link": ["/locations/chinatownGate"]},
     {"name": "Chinatown Chamber of Commerce",
      "address": "2169B S China Pl",
      "position": {"lat": 41.853530, "lng": -87.635130},
@@ -131,7 +137,19 @@ function iconDialogue(idx) {
         msgString = '<ul>';
         for (var i = 0; i < links.length; i++) {
             // links[i] is not escaped, so it should be changed carefully
-            msgString += '<li><a href=' + links[i] + '>' + links[i] + '</a></li>';
+            if (!Array.isArray(links[i])) {
+                msgString += '<li><a href=' + links[i] + '>' + links[i] + '</a></li>';
+            }
+            else if (links[i].length == 1) {
+                msgString += '<li><a href=' + links[i][0] + '>' + links[i][0] + '</a></li>';
+            }
+            else if (links[i].length == 2) {
+                msgString += '<li><a href=' + links[i][0] + '>' + links[i][1] + '</a></li>';
+            }
+            else {
+                msgString += '<li>' +
+                             '<a href=' + links[i][0] + '>' + links[i][lang_selected+1] + '</a></li>';
+            }
         }
         msgString += '</ul>';
         vex.dialog.alert({ unsafeMessage: msgString });
