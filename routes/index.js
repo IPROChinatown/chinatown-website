@@ -31,8 +31,21 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
 
+/* GET individual content pages. */
+var cont = ["entrepreneurship","damaDancers","youthGroup","world_chinatown","newYearParade"]
+
+function make_cont_router(cont) {
+    router.get("/content/".concat(cont), function (req, res, next) {
+        res.render("content/".concat(cont), { title: cont });
+    });
+}
+
+for (t = 0; t < cont.length; t++) {
+    make_cont_router(cont[t]);
+}
+
 /* GET individual location pages. */
-var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "commerce", "tradition-objects", "youthGroup", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac", "damaDancers","medicine","newYearParade","st-therese","ccuc","pingTom","ccvp", "library"]
+var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac", "medicine","st-therese","ccuc","pingTom","ccvp","casl","library", "commerce","tradition-objects"]
 
 function make_loc_router (loc) {
 	router.get("/locations/".concat(loc), function(req, res, next) {
