@@ -87,7 +87,7 @@ var locations = [
      "address": "2100 S Wentworth Ave",
      "position": {"lat": 41.853859, "lng": -87.632156},
      "icon": make_icon_link("ChinatownLibrary.png"),
-     "link": ["/stories#library"]},
+     "link": [["/locations/library", "Chinatown Library", "中国城图书馆", "中國城圖書館"], ["/stories#library", "Stories", "故事", "故事"]]},
     {"name": "Chinatown Gate",
      "address": "2206 S Wentworth Ave",
      "position": {"lat": 41.852610, "lng": -87.632170},
