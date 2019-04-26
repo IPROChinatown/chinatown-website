@@ -124,6 +124,11 @@ document.getElementById("map").appendChild(main_map);
 var map_width = main_map.offsetWidth;
 var map_height = main_map.offsetHeight;
 
+function cleanString(str) {
+    // Stupidity check, to disallow string closings or html tags in a string
+    return str.replace('<', '').replace('>', '').replace('"', '');
+}
+
 function iconDialogue(idx) {
     translate_coords(locations[idx].position.lat, locations[idx].position.lng);
     // Get x position and y position?
@@ -133,21 +138,21 @@ function iconDialogue(idx) {
         for (var i = 0; i < links.length; i++) {
             // links[i] is not escaped, so it should be changed carefully
             if (!Array.isArray(links[i])) {
-                msgString += '<li><a href=' + links[i] + '>' + links[i] + '</a></li>';
+                msgString += '<li><a href=' + cleanString(links[i]) + '>' + cleanString(links[i]) + '</a></li>';
             }
             else if (links[i].length == 1) {
-                msgString += '<li><a href=' + links[i][0] + '>' + links[i][0] + '</a></li>';
+                msgString += '<li><a href=' + cleanString(links[i][0]) + '>' + cleanString(links[i][0]) + '</a></li>';
             }
             else if (links[i].length == 2) {
-                msgString += '<li><a href=' + links[i][0] + '>' + links[i][1] + '</a></li>';
+                msgString += '<li><a href=' + cleanString(links[i][0]) + '>' + cleanString(links[i][1]) + '</a></li>';
             }
             else {
                 msgString += '<li>' +
-                             '<a href=' + links[i][0] + '>' + links[i][lang_selected+1] + '</a></li>';
+                             '<a href=' + cleanString(links[i][0]) + '>' + cleanString(links[i][lang_selected+1]) + '</a></li>';
             }
         }
         msgString += '</ul>';
-        vex.dialog.alert({ unsafeMessage: msgString });
+        setTimeout(function(){ vex.dialog.alert({ unsafeMessage: msgString }); }, 100);
     }
     else {
         window.open(links[0], "_self");
