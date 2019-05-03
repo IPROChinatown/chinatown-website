@@ -54,5 +54,11 @@ The server should run on localhost:3000, unless configured otherwise.
 - Finally, we call load_locs() with a 500 ms timeout (the timeout is important to ensure that the map image has been appropriately loaded).
 - Whenever the window is resized or clicked, we need to refresh, because if we don't, then icons will be in the wrong position in certain situations arising from resizing and clicking the window.
 ### readmore.js / readmoreZh.js
+	-could be deleted.
+	-the read more and read less functions are all in head file, and there're three, one for english, one for simplified chinese, and one for tradiontional chinese.
+	-the function use <a> it's a link rather than button.
+	-the problem still have is that we have to keep the text all in one <p> which is not a perfect structure
+	-also when user press read more, it will bring the user to the bottom of the page
 
 ### scrollToTop.js
+	-this funtion allow to bring user from bottom of the page to top of the page.
