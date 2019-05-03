@@ -27,7 +27,8 @@ var locations = [
      "position": {"lat": 41.853170000, "lng": -87.631345000},
      "icon": make_icon_link("dragonwall.png"),
      "link": [["locations/nine-dragon", "Nine Dragon Wall"],
-              ["locations/newYearParade", "New Year Parade", "中国新年", "New Year Parade"]]},
+              ["content/newYearParade", "New Year Parade", "中国新年", "New Year Parade"],
+              ["content/world_chinatown"]]},
     {"name": "Buddhist Friendship Temple",
      "address": "2249 S Wentworth Ave",
      "position": {"lat": 41.851436200, "lng": -87.631652300},
@@ -72,12 +73,12 @@ var locations = [
      "address": "2133 S China Pl",
      "position": {"lat": 41.853490, "lng": -87.635407},
      "icon": make_icon_link("plaza.png"),
-     "link": [["locations/chineseZodiac", "Chinese Zodiac Square", "十二生肖广场位于中国城新区", "十二生肖廣場位於中國城新區"], ["locations/damaDancers", "Dama Dancers", "广场舞", "廣場舞"]]},
+     "link": [["locations/chineseZodiac", "Chinese Zodiac Square", "十二生肖广场位于中国城新区", "十二生肖廣場位於中國城新區"], ["content/damaDancers", "Dama Dancers", "广场舞", "廣場舞"]]},
     {"name": "Chinese American Service League / CBCAC",
      "address": "2141 S Tan Ct",
      "position": {"lat": 41.854406300, "lng": -87.635565500},
      "icon": make_icon_link("casl.png"),
-     "link": [["locations/casl", "Chinese American Service League", "华裔美国人服务联盟", "華裔美國人服務聯盟"], ["locations/cbcac", "CBCAC"], ["locations/youthGroup", "Origin Youth Group"], ["locations/ccvp", "Chinatown Community Vision Project", "芝加哥华埠远见计划", "芝加哥華埠遠見計劃"]]},
+     "link": [["locations/casl", "Chinese American Service League", "华裔美国人服务联盟", "華裔美國人服務聯盟"], ["locations/cbcac", "CBCAC"], ["content/youthGroup", "Origin Youth Group"], ["locations/ccvp", "Chinatown Community Vision Project", "芝加哥华埠远见计划", "芝加哥華埠遠見計劃"]]},
     {"name": "Ping Tom Park",
      "address": "1700 S Wentworth Ave",
      "position": {"lat": 41.856500900, "lng": -87.634700000},
@@ -124,6 +125,11 @@ document.getElementById("map").appendChild(main_map);
 var map_width = main_map.offsetWidth;
 var map_height = main_map.offsetHeight;
 
+function cleanString(str) {
+    // Stupidity check, to disallow string closings or html tags in a string
+    return str.replace('<', '').replace('>', '').replace('"', '');
+}
+
 function iconDialogue(idx) {
     translate_coords(locations[idx].position.lat, locations[idx].position.lng);
     // Get x position and y position?
@@ -133,21 +139,21 @@ function iconDialogue(idx) {
         for (var i = 0; i < links.length; i++) {
             // links[i] is not escaped, so it should be changed carefully
             if (!Array.isArray(links[i])) {
-                msgString += '<li><a href=' + links[i] + '>' + links[i] + '</a></li>';
+                msgString += '<li><a href=' + cleanString(links[i]) + '>' + cleanString(links[i]) + '</a></li>';
             }
             else if (links[i].length == 1) {
-                msgString += '<li><a href=' + links[i][0] + '>' + links[i][0] + '</a></li>';
+                msgString += '<li><a href=' + cleanString(links[i][0]) + '>' + cleanString(links[i][0]) + '</a></li>';
             }
             else if (links[i].length == 2) {
-                msgString += '<li><a href=' + links[i][0] + '>' + links[i][1] + '</a></li>';
+                msgString += '<li><a href=' + cleanString(links[i][0]) + '>' + cleanString(links[i][1]) + '</a></li>';
             }
             else {
                 msgString += '<li>' +
-                             '<a href=' + links[i][0] + '>' + links[i][lang_selected+1] + '</a></li>';
+                             '<a href=' + cleanString(links[i][0]) + '>' + cleanString(links[i][lang_selected+1]) + '</a></li>';
             }
         }
         msgString += '</ul>';
-        vex.dialog.alert({ unsafeMessage: msgString });
+        setTimeout(function(){ vex.dialog.alert({ unsafeMessage: msgString }); }, 100);
     }
     else {
         window.open(links[0], "_self");

@@ -1,0 +1,31 @@
+* TODO Map pins
+** Some locations or content pages still don't have map pins
+* TODO Improve readmore functionality
+** Readmore should work without significantly impacting the structure of the HTML.
+** Readmore should work across multiple paragraphs.
+** Integrate with language functionality? Perhaps reconsider how languages are handled.
+*** The alternative way to handle languages is to have a new path for each language.
+**** www.example.com/en/foo and www.example.com/zh_HANS/foo
+* TODO Clean up directory structure
+** Many files are named inconsistently (foo-bar, fooBar, foo_bar). It could be a massive job to change them one by one.
+** I like the foo-bar name scheme the most, then fooBar, then foo_bar. Using spaces in filenames is typically inadvisable.
+** Try using the Unix/Linux "sed" utility to change the content of files. Renaming is no big issue.
+* TODO Clean up HTML
+** Hopefully somebody knows how to make HTML look nice, because it's a bit involved.
+** There are a lot of <div>s which are not all necessary.
+** There are some paragraphs merged needlessly into one "paragraph" in order to facilitate readmore. This is awful.
+** There are alt texts in English for the Chinese language sections.
+* TODO Unify data structures
+** The locations data structure in "map.js" could be used across multiple scripts and even loaded separately.
+** This would save a lot of trouble from changing information.
+* TODO Mobile optimization
+** We didn't get much chance to test things on mobile.
+* TODO "Make it look nice"
+** We all hate to hear this one, but work closely with people who understand design to make it happen.
+* TODO Finalize audio/text content
+** Some of the audio and text content is not there or not quite good enough.
+* TODO NoJS warnings
+** If you're going to use JavaScript, then you need to tell users that don't have it what's going on.
+*** Use more <noscript> tags to explain what's going on to people without JavaScript
+** My preference was to release my JavaScript into the Public Domain, as you can see on the map.js and language.js files.
+*** This means that I have no copyright claims to my JavaScript. Otherwise, I might be able to legally claim that I own the JavaScript, and prevent you from using it.
