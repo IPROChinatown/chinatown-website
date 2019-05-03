@@ -128,8 +128,8 @@
       .show-less-en:target + a {
       display: none;
       }
-      
-       .show-less-zhs {
+
+      .show-less-zhs {
       display: none;
       }
 
@@ -145,7 +145,24 @@
       .show-less-zhs:target + a {
       display: none;
       }
-      
+
+      .show-less-zht {
+      display: none;
+      }
+
+      .show-less-zht:target {
+      display: block;
+      }
+
+      .show-less-zht:target ~ p {
+      display: block;
+      max-height: 100%;
+      }
+
+      .show-less-zht:target + a {
+      display: none;
+      }
+
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0;
     </style>

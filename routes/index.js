@@ -32,7 +32,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 /* GET individual content pages. */
-var cont = ["entrepreneurship","damaDancers","youthGroup","world_chinatown","newYearParade"]
+var cont = ["entrepreneurship","damaDancers","youthGroup","world_chinatown","newYearParade","ccvp"]
 
 function make_cont_router(cont) {
     router.get("/content/".concat(cont), function (req, res, next) {
@@ -45,7 +45,7 @@ for (t = 0; t < cont.length; t++) {
 }
 
 /* GET individual location pages. */
-var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac", "medicine","st-therese","ccuc","pingTom","ccvp","casl","library", "commerce","tradition-objects"]
+var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac", "medicine","st-therese","cucc","pingTom","casl","library", "commerce","tradition-objects"]
 
 function make_loc_router (loc) {
 	router.get("/locations/".concat(loc), function(req, res, next) {
