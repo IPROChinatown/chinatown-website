@@ -5,7 +5,10 @@ body,
   letter-spacing: 0.85px;
 }
 body{
-    background-color: rgba(243,184,71,.8);
+	background-image: url(../images/locations/puitak.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
 }
 a,
 a:hover,
