@@ -7,10 +7,10 @@ Author URI: https://twitter.com/kantbtrue
 
 */
 
-html,
+/*html,
 body {
 	height: 100%;
-}
+}*/
 .equal-height > div {
 	display: flex;
 }
