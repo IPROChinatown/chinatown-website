@@ -10,10 +10,10 @@ body{
 	background-size: 100%;
 	background-attachment: fixed;
 }
-a,
-a:hover,
-a:focus {
-  text-decoration: none;
+    
+li a:hover{
+    
+    background-color: black;
 }
 h1,
 h2,
@@ -136,13 +136,17 @@ h6,
     bottom: 25px;
     transform: rotate(-15deg);
 }
+@media (max-width: 767px) {
+ .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+ color: #777;
+ }
 
 @media screen and (max-width: 991px) {
   .cover {
     overflow: hidden;
   }
   .navbar-toggler {
-    background: #ffffff;
+    background: transparent;
     padding: 10px;
   }
 }
