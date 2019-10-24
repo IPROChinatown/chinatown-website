@@ -10,6 +10,13 @@ body{
 	background-size: 100%;
 	background-attachment: fixed;
 }
+.center-div {
+    margin: 0;
+    width: 900px;
+}
+.pages-center-div{
+    margin-top: 30px;
+}
     
 li a:hover{
     
