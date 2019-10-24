@@ -4,11 +4,15 @@ body,
   line-height: 1.5;
   letter-spacing: 0.85px;
 }
+html{
+	height: auto;
+}
 body{
 	background-image: url(../images/main.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	background-attachment: fixed;
+	height: auto;
 }
 .center-div {
     margin: 0;
