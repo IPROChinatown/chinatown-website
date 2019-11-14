@@ -22,10 +22,10 @@ body{
     margin-top: 30px;
 }
     
-li a:hover{
+/*li a:hover{
     
     background-color: black;
-}
+}*/
 h1,
 h2,
 h3,
@@ -160,4 +160,5 @@ h6,
     background: transparent;
     padding: 10px;
   }
+    
 }
