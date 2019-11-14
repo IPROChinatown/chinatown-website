@@ -125,7 +125,7 @@ a.text-gray:focus {
 	background-color: #f3f5f6;
 }
 .bg-light {
-	background-color: #f9ebd3!important;
+	background-color: rgba(255, 255, 255, .8)!important;
 }
 
 /* Form */
@@ -185,3 +185,14 @@ a.text-gray:focus {
     color: #ffffff;
     opacity: 0.35;
 }
+.dropdown-item text-white:hover{
+    
+    background-color: transparent;
+}
+/*Mouse Hover on links*/
+li.text-white:hover{
+	color: transparent;
+    background-color: transparent;
+}
+
+
