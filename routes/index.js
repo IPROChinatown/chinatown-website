@@ -32,7 +32,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 /* GET individual content pages. */
-var cont = ["entrepreneurship","damaDancers","youthGroup","world_chinatown","newYearParade","ccvp", "chicagoFlourishingChinatown", "collegeStudentsChinatown", "midAutumn", "summerFair", "originsChinatowns", "stTereseChildren"]
+var cont = ["entrepreneurship","damaDancers","youthGroup","world_chinatown","newYearParade","ccvp", "chicagoFlourishingChinatown", "collegeStudentsChinatown", "midAutumn", "summerFair", "originsChinatowns", "stTereseChildren", "theresaMah"]
 
 function make_cont_router(cont) {
     router.get("/content/".concat(cont), function (req, res, next) {
