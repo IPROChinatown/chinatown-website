@@ -45,7 +45,7 @@ for (t = 0; t < cont.length; t++) {
 }
 
 /* GET individual location pages. */
-var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac", "medicine","st-therese","cucc","pingTom","casl","library", "commerce","tradition-objects"]
+var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac", "medicine","st-therese","cucc","pingTom","casl","library", "commerce","tradition-objects","testlocation"]
 
 function make_loc_router (loc) {
 	router.get("/locations/".concat(loc), function(req, res, next) {
