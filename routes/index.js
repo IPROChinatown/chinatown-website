@@ -46,29 +46,30 @@ for (t = 0; t < cont.length; t++) {
 }
 
 /* GET individual location pages. */
-var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac", "medicine","st-therese","cucc","pingTom","casl","library", "commerce","tradition-objects","testlocation"]
+var locs = ["buddhist-temple", "medicine", "ccamuseum", "casl", "st-therese", "nine-dragon", "puitak", "familyAssoc", "chinatownGate", "cbcac", "chineseZodiac","cucc","pingTom","library", "commerce","tradition-objects","testlocation"]
+var locTitle = ["The Buddhist Temple", "Herbalist", "Chinese-American Museum of Chicago", "Chinese American Service League- CASL", "St Therese", "Nine Dragon Wall", "Pui Tak Center", "Family Associations", "Chinatown Gate", "CBCAC", "The Chinese Zodiac","Chicago Chinese Christian Union Church","Ping Tom Park","Chinatown Library", "Chinatown Chamber of Commerce","Unique Objects","testlocation"]
 
-function make_loc_router (loc) {
+function make_loc_router (loc,locTitle) {
 	router.get("/locations/".concat(loc), function(req, res, next) {
-		res.render("locations/".concat(loc), { title: loc });
+		res.render("locations/".concat(loc), { title: locTitle });
 	});
 }
 
 for (l = 0; l < locs.length; l++) {
-	make_loc_router(locs[l]);
+	make_loc_router(locs[l],locTitle[l]);
 }
 
 /* GET individual story pages. */
 var stories = ["Hailan-Yu", "Madison-Chan", "Michael-Zhao", "Preston-Yuen", "Renee-Zhao", "Ryan-Daly", "Xiaolynn-Zhen"]
-
-function make_story_router (name) {
+var storiesTitle = ["Hailan Yu", "Madison Chan", "Michael Zhao", "Preston Yuen", "Renee Zhao", "Ryan Daly", "Xiaolynn Zhen"]
+function make_story_router (name,nameTitle) {
 	router.get("/stories/".concat(name), function(req, res, next) {
-		res.render("stories/".concat(name), { title: name });
+		res.render("stories/".concat(name), { title: nameTitle });
 	});
 }
 
 for (s = 0; s < stories.length; s++) {
-	make_story_router(stories[s]);
+	make_story_router(stories[s],storiesTitle[s]);
 }
 
 module.exports = router;
