@@ -33,7 +33,7 @@ router.get('/contact', function(req, res, next) {
 
 /* GET individual content pages. */
 var cont = ["entrepreneurship","damaDancers","youthGroup","world_chinatown","newYearParade","ccvp", "chicagoFlourishingChinatown", "collegeStudentsChinatown", "midAutumn", "summerFair", "originsChinatowns", "stTereseChildren", "theresaMah"]
-var contTitles = ["Entrepreneurship","Dama Dancers","Youth Group","Chinatowns Around the World","New Year Parade","CCVP", "Chicago Flourishing Chinatown", "College Students in Chinatown", "Mid-Autumn Festival", "Summer Fair", "Origins of Chinatowns", "St. Therese Children", "Theresa Mah"]
+var contTitle = ["Entrepreneurship","Dama Dancers","Youth Group","Chinatowns Around the World","New Year Parade","CCVP", "Chicago Flourishing Chinatown", "College Students in Chinatown", "Mid-Autumn Festival", "Summer Fair", "Origins of Chinatowns", "St. Therese Children", "Theresa Mah"]
 
 function make_cont_router(cont, contTitle) {
     router.get("/content/".concat(cont), function (req, res, next) {
