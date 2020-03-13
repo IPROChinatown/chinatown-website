@@ -1,3 +1,8 @@
+* Some large upgrades for each of the pages is available under views/locations/testlocation.ejs . This was the design we were going to switch to before we had to drop the project due to COVID-19. There is a strange bug with the tab names where they display vertically instead of horizontally like they should, but it still works pretty well.
+* This page allows for more space to be used for text, and for multiple images to be used for any page. 
+* We wish you the best of luck!
+
+
 * TODO Map pins
 ** Some locations or content pages still don't have map pins
 * TODO Improve readmore functionality
