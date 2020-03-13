@@ -1,6 +1,7 @@
 # chinatown-website
 
 This is a website that will be used as a tour in Chicago's chinatown with the Chinese-American Museum of Chicago
+Make sure to check TODO for the location of the new page design we couldn't roll out.
 
 ## Team
 Keith Bateman
@@ -17,6 +18,10 @@ Gregory Gassoway
 ## Running
 To run the server, type `npm start` or run the "${DIR}/bin/www" executable.
 The server should run on localhost:3000, unless configured otherwise.
+
+## Current web hosting
+The website is currently hosted at http://ccamuseum-chinatown-web.herokuapp.com/. 
+Any commits to this github will update the live website.
 
 ## Structure
 - Routes are specified in ${DIR}/routes/index.js (translate url to directory path).
