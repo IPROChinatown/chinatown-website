@@ -1,6 +1,6 @@
 # chinatown-website
 
-This is a website that will be used as a tour in Chicago's chinatown with the Chinese-American Museum of Chicago
+This is a website that will be used as a tour in Chicago's chinatown with the Chinese-American Museum of Chicago.
 Make sure to check TODO for the location of the new page design we couldn't roll out.
 
 ## Team
